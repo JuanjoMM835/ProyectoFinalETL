@@ -1,0 +1,36 @@
+project:
+  name: proyecto_final_gya
+  version: 1.0.0
+  description: Pipeline ETL bajo Arquitectura Medallion para análisis de educación en Colombia.
+  authors:
+   Juan Jose Moncayo Martinez - 2225678
+  repository: https://github.com/JuanjoMM835/ProyectoFinalETL.git
+  date: 2026-09-26
+
+paths:
+  data_dir: data
+  source_dir: data/source
+  bronze_dir: data/bronze
+  silver_dir: data/silver
+  gold_dir: data/gold
+  logs_dir: logs
+
+sources:
+  education_stats:
+    path: data/source/men_educacion_preescolar_basica_media_20261002.csv
+    file_name: men_educacion_preescolar_basica_media_20261002.csv
+    file_type: csv
+    read_options:
+      sep: ","           
+      encoding: "utf-8-sig" # Prueba también con "latin-1" si falla
+      low_memory: False
+      dtype: str         
+
+constants:
+  date_format: "%d-%m-%Y"
+  pi: 3.141592653589793
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_name: etl_pipeline.log
