@@ -22,7 +22,7 @@ sources:
     file_type: csv
     read_options:
       sep: ","           
-      encoding: "utf-8-sig" # Prueba también con "latin-1" si falla
+      encoding: "utf-8-sig"
       low_memory: False
       dtype: str         
 
