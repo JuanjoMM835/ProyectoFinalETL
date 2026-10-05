@@ -1,5 +1,12 @@
-pandas
-openpyxl
-pyarrow
-pyyaml
-python-dotenv
+# Analisis de datos
+pandas==2.0.3
+numpy==1.24.4
+
+# Graficos
+matplotlib==3.7.5
+seaborn==0.13.2
+
+# Notebooks
+ipykernel==6.29.5
+jupyterlab==4.2.5
+pywinpty==2.0.13

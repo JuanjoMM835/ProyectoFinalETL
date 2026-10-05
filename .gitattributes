@@ -1,0 +1,2 @@
+data/bronze/** -text
+data/bronze/ACCESOS_INTERNET_FIJO_2_8.csv filter=lfs diff=lfs merge=lfs -text

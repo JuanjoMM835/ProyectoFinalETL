@@ -1,25 +1,12 @@
-# Entornos virtuales
 venv/
-.env
-
-# Archivos compilados de Python
+.venv/
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Jupyter Notebook
 .ipynb_checkpoints/
-
-# Datos generados 
-data/source/
-data/bronze/
-data/silver/
-data/gold/
-
-# Logs
-logs/
+.pytest_cache/
+.coverage
+htmlcov/
 *.log
-
-# Sistema Operativo
-.DS_Store
-Thumbs.db
+.env
+.env.*
+!.env.example
