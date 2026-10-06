@@ -1,6 +1,14 @@
+# Entorno compatible: Python 3.8 a 3.11, de 64 bits.
+# Se conservan las versiones utilizadas por los notebooks.
+
 # Analisis de datos
 pandas==2.0.3
 numpy==1.24.4
+
+# Lectura de Excel, archivos Parquet y configuracion YAML
+openpyxl==3.1.5
+pyarrow==17.0.0
+PyYAML==6.0.3
 
 # Graficos
 matplotlib==3.7.5
@@ -9,4 +17,7 @@ seaborn==0.13.2
 # Notebooks
 ipykernel==6.29.5
 jupyterlab==4.2.5
-pywinpty==2.0.13
+pywinpty==2.0.13; sys_platform == "win32"
+
+# Comprobaciones automatizadas
+pytest==8.3.5

@@ -1,0 +1,704 @@
+{
+  "ejecucion_id": "457c17ca-dbde-40c5-b70d-eaee1dfd3a08",
+  "etapa": "silver",
+  "estado": "exploratorio",
+  "inicio_utc": "2026-10-06T05:25:09.205459+00:00",
+  "fin_preparacion_utc": "2026-10-06T05:29:30.774592+00:00",
+  "version_proyecto": "1.0.0",
+  "version_contrato": "1.0",
+  "periodo": {
+    "inicio": 2018,
+    "fin": 2024
+  },
+  "trimestre_referencia": 4,
+  "entradas": {
+    "educacion": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR__B_SICA_Y_MEDIA_POR_MUNICIPIO.csv",
+      "tamano_bytes": 3472984,
+      "sha256": "4ef92d9b718d6aec14dda428585b9da7a81192b1c8548e116896de15c1439eb9",
+      "modificado_archivo_utc": "2026-10-04T01:17:55.755462+00:00",
+      "fecha_descarga": null,
+      "version_fuente": null
+    },
+    "poblacion": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\PPED-AreaMun-2018-2042_VP.xlsx",
+      "tamano_bytes": 3948350,
+      "sha256": "1ea83594ad308becff39934a3977c102919c25740f60439be95d797396d11283",
+      "modificado_archivo_utc": "2026-10-04T01:18:04.688302+00:00",
+      "fecha_descarga": null,
+      "version_fuente": null
+    },
+    "internet": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\ACCESOS_INTERNET_FIJO_2_8.csv",
+      "tamano_bytes": 441330430,
+      "sha256": "2fa895b0bb5d19c946c5f9c6f060e9de4036281a27c29c7e5a35243600d6bb5e",
+      "modificado_archivo_utc": "2026-10-04T01:04:12.961374+00:00",
+      "fecha_descarga": null,
+      "version_fuente": null
+    },
+    "divipola": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\DIVIPOLA-_C_digos_municipios.csv",
+      "tamano_bytes": 70850,
+      "sha256": "159b4b84595a11be5bf623fdf25c6fd5c9ac8c3ed898cf7928b2b3f321b9b492",
+      "modificado_archivo_utc": "2026-10-04T01:18:10.105544+00:00",
+      "fecha_descarga": null,
+      "version_fuente": null
+    }
+  },
+  "bronze_verificado_sin_cambios": true,
+  "configuracion": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\config\\config.yaml",
+    "sha256": "8d4b8e23aa6cb5c2776dc61403b54b1f6dd15976389b7f39061534507cd10252"
+  },
+  "codigo": {
+    "commit_git": "1c6a1a04a9e33f9b213b6141847bb59db66b4a51",
+    "cambios_locales": true,
+    "archivos": [
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\main.py",
+        "sha256": "c2ef8e14b6cd6f183d14cfdd95ad4c30f9b284c210f930fec30eecfbcba20a13"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_divipola.py",
+        "sha256": "755511c71b3a9f071837d0251700b992b9462e3aec83da8f3f662c65220d0949"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_education.py",
+        "sha256": "0c768a83e6412246ae11199b78ed9cd77344c7bc25e3ef1c949c28fab908a215"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_internet.py",
+        "sha256": "75b37d462c1f835ae17bd307e37f452a127fd9c64262f017c884f77f9d5faaae"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_population.py",
+        "sha256": "8521d4cff1403efbcd9201a2a634b53b0237bd80fd9e09aaec43189b72c7af65"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\execution_metadata.py",
+        "sha256": "2da80633280e27e04522ea2b30a5a6f40908f119f60693df3c40581e80950da6"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_results.py",
+        "sha256": "f4dab7313806de52c4862ef8a69b3ea4d8d0fbeea8f10b63e7a034f17d0e6557"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\build_indicators.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_divipola.py",
+        "sha256": "f47e0c67a20d237c92b0a7bdb24fc0ee536af1fa3ba07cf18cc22e0692b78ebb"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_education.py",
+        "sha256": "3ca70269c751cf761a36d580d4f804dc07c3a14875c6b5923728d4b860ce308b"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_internet.py",
+        "sha256": "951871dd5d666eba59a691dd52d693c2cc684497182109c4a2b40b4d80006e3d"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_population.py",
+        "sha256": "a191f3397c3469ffc9770b73874420388a92d3e96aa86f6c359008f7731f1fc6"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\integrate_sources.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\quality_silver.py",
+        "sha256": "9b94d7edfa304ca26e405d3f0b51e20abd2d31afbe56f3ae66c84f2a433b97a3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\docs\\contrato_datos.md",
+        "sha256": "6d67a59ebf5de7339ddd3f6a9fdc533153ba5e401a9bec018c09187d0bb260b2"
+      }
+    ]
+  },
+  "entorno": {
+    "python": "3.8.10",
+    "pandas": "2.0.3",
+    "pyarrow": "17.0.0",
+    "pyyaml": "6.0.3"
+  },
+  "salidas": {
+    "educacion": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\educacion_limpia.parquet",
+      "filas": 7850,
+      "columnas": [
+        {
+          "nombre": "anio",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_5_16",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "tasa_matriculacion_5_16",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_bruta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_bruta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_bruta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_bruta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_bruta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "tamano_promedio_de_grupo",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "sedes_conectadas_a_internet",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "aprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "aprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "aprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "aprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "aprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "repitencia",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "repitencia_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "repitencia_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "repitencia_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "repitencia_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "anio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_5_16_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "cobertura_neta_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "desercion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "reprobacion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_5_16_no_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_homologacion",
+          "tipo": "string"
+        }
+      ],
+      "tamano_bytes": 956258,
+      "sha256": "7aec03b571e8f9a70e6e7dc33459024110ad7b3800bf1c1111bdc9c7054ba5aa"
+    },
+    "poblacion": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\poblacion_limpia.parquet",
+      "filas": 7861,
+      "columnas": [
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "anio",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_total_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_cabecera_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_centros_rural_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "fila_excel_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "fila_excel_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "fila_excel_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "areas_incompletas",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "suma_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "diferencia_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_consistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "metadatos_incompletos",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "revision_territorial_pendiente",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "estado_poblacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "denominador_positivo",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_para_ratios_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_homologacion",
+          "tipo": "string"
+        }
+      ],
+      "tamano_bytes": 502430,
+      "sha256": "c70835eb7969da55c34da2039c511f4fe854494f371cb451ef0b925f4c2292e4"
+    },
+    "internet": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\internet_municipio_anio.parquet",
+      "filas": 7815,
+      "columnas": [
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "anio",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_t4",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "accesos_validos_parcial",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "trimestre_referencia",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "registros_fuente",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "registros_accesos_no_utilizables",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "registro_origen_min",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "registro_origen_max",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "revision_territorial_pendiente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "metadatos_reporte_pendientes",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "segmento_pendiente_revision",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_internet",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_para_indicadores_utilizables",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigos_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "nombres_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigos_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "nombres_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "segmentos_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tecnologias_originales",
+          "tipo": "string"
+        }
+      ],
+      "tamano_bytes": 269420,
+      "sha256": "653dfdaa405604f080d3c5fabb4037eec887481f8acb6b90d22f59740d34036c"
+    },
+    "divipola": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\divipola_limpia.parquet",
+      "filas": 1122,
+      "columnas": [
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tipo_territorio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "longitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "latitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tipo_territorio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "longitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "latitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tipo_no_resuelto",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "metadatos_incompletos",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "departamento_nombre_inconsistente",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "estado_catalogo",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_longitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_latitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "coordenadas_utilizables",
+          "tipo": "boolean"
+        }
+      ],
+      "tamano_bytes": 102450,
+      "sha256": "785f298c685fad79eb6433ec5f0bffd09d8cad713bbb6aca0250444a13d1b919"
+    }
+  },
+  "reporte_calidad": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\reporte_calidad.json",
+    "tamano_bytes": 53513,
+    "sha256": "166b4d6a3517af99fd40f847a0c0117c0146330c6a4a6a03e70770e9ccc173a5"
+  },
+  "metadata_ejecucion": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\metadata_ejecucion.json"
+  },
+  "fin_exportacion_utc": "2026-10-06T05:29:34.208985Z"
+}

@@ -1,15 +1,21 @@
+# Todas las rutas se resuelven desde la raiz de ProyectoFinalETL,
+# no desde la carpeta donde se abra la terminal.
 project:
   name: proyecto_final_gya
-  version: 1.0.0
-  description: Pipeline ETL bajo Arquitectura Medallion para análisis de educación en Colombia.
+  version: "1.0.0"
+  description: Pipeline ETL Medallion de educacion, poblacion y conectividad en Colombia.
   authors:
-   Juan Jose Moncayo Martinez - 2225678
+    - Juan Jose Moncayo Martinez - 2225678
   repository: https://github.com/JuanjoMM835/ProyectoFinalETL.git
-  date: 2026-09-26
+  date: "2026-09-26"
+  configuration_updated_on: "2026-10-06"
+  data_contract:
+    path: docs/contrato_datos.md
+    version: "1.0"
 
 paths:
   data_dir: data
-  source_dir: data/source
+  source_dir: data/source  # Reservada para futuras descargas; las entradas actuales estan en Bronze.
   bronze_dir: data/bronze
   silver_dir: data/silver
   gold_dir: data/gold
@@ -17,25 +23,156 @@ paths:
   notebooks_dir: notebooks
   tests_dir: tests
 
+processing:
+  year_start: 2018
+  year_end: 2024
+  baseline_source: education_stats
+  primary_key:
+    - codigo_municipio
+    - anio
+  municipality_code_length: 5
+  department_code_length: 2
+  include_non_municipal_areas: true
+  exclude_national_records: true
+  internet_quarter: 4
+  allow_quarter_fallback: false
+  impute_missing_as_zero: false
+  include_previous_year_for_growth: false
+
 sources:
   education_stats:
-    path: data/source/men_educacion_preescolar_basica_media_20261002.csv
-    file_name: men_educacion_preescolar_basica_media_20261002.csv
+    path: data/bronze/MEN_ESTADISTICAS_EN_EDUCACION_EN_PREESCOLAR__B_SICA_Y_MEDIA_POR_MUNICIPIO.csv
     file_type: csv
     read_options:
       sep: ","
       encoding: "utf-8-sig"
-      low_memory: False
-      dtype: str
+      low_memory: false
+      dtype: "string"
+      keep_default_na: false
+      na_values: [""]
+    required_columns:
+      - AÑO
+      - CÓDIGO_MUNICIPIO
+      - MUNICIPIO
+      - CÓDIGO_DEPARTAMENTO
+      - DEPARTAMENTO
+      - COBERTURA_NETA
+      - DESERCIÓN
+      - REPROBACIÓN
+
+  internet_access:
+    path: data/bronze/ACCESOS_INTERNET_FIJO_2_8.csv
+    file_type: csv
+    # Conservar los casos historicos sin transferir accesos entre codigos.
+    territorial_review_codes: ["27086", "27493", "27615", "94343", "94663"]
+    # 117 existe en el CSV, pero su exclusividad historica requiere revision.
+    known_segment_ids: ["101", "102", "103", "104", "105", "106", "107", "108", "109", "117"]
+    review_segment_ids: ["117"]
+    read_options:
+      sep: ";"
+      encoding: "utf-8"
+      dtype: "string"
+      keep_default_na: false  # Preserva el literal NA de tecnologia.
+      na_values: [""]
+      chunksize: 100000
+    required_columns:
+      - ANNO
+      - TRIMESTRE
+      - ID_EMPRESA
+      - EMPRESA
+      - ID_MUNICIPIO
+      - MUNICIPIO
+      - ID_DEPARTAMENTO
+      - DEPARTAMENTO
+      - ID_SEGMENTO
+      - SEGMENTO
+      - ACCESOS
+      - ID_TECNOLOGIA
+      - TECNOLOGIA
+      - VELOCIDAD_EFECTIVA_DOWNSTREAM
+      - VELOCIDAD_EFECTIVA_UPSTREAM
+
+  population:
+    path: data/bronze/PPED-AreaMun-2018-2042_VP.xlsx
+    file_type: xlsx
+    # Casos historicos del contrato: marcar revision, sin reasignar poblacion.
+    territorial_review_codes:
+      - "27493"  # Nuevo Belen de Bajira.
+      - "27615"  # Riosucio.
+      - "94343"  # Barrancominas.
+      - "94663"  # Mapiripana.
+    read_options:
+      sheet_name: PobMunicipalxÁrea
+      header: 7  # Indice de fila de pandas; la primera fila tiene indice 0.
+      engine: openpyxl
+      dtype: "string"
+      keep_default_na: false
+      na_values: [""]
+    required_columns:
+      - DP
+      - DPNOM
+      - MPIO
+      - DPMP
+      - AÑO
+      - ÁREA GEOGRÁFICA
+      - TOTAL
+
+  divipola:
+    path: data/bronze/DIVIPOLA-_C_digos_municipios.csv
+    file_type: csv
+    read_options:
+      sep: ","
+      encoding: "utf-8-sig"
+      dtype: "string"
+      keep_default_na: false
+      na_values: [""]
+    required_columns:
+      - Código Municipio
+      - Nombre Municipio
+      - Código Departamento
+      - Nombre Departamento
+      - "Tipo: Municipio / Isla / Área no municipalizada"
+
+quality:
+  # Los umbrales se expresan en porcentaje: 95 significa 95 %, no 0.95.
+  min_homologation_pct: 95
+  min_critical_completeness_pct: 95
+  min_joint_completeness_pct: 95
+  critical_columns:
+    - poblacion_total
+    - poblacion_centros_rural
+    - accesos_t4
+    - cobertura_neta
+    - desercion
+    - reprobacion
+  completeness_denominator: full_education_territorial_universe
+  fail_on_missing_key: true
+  fail_on_duplicate_key: true
+  preserve_unmatched_rows: true
+  require_population_components_consistency: true
+  require_positive_population_for_ratios: true
+  clip_education_rates_automatically: false
+
+indicators:
+  # Estos indicadores requieren las verificaciones o la metodologia pendientes del contrato.
+  weighted_speed_enabled: false
+  fiber_share_enabled: false
+  priority_index_enabled: false
 
 outputs:
-  education_silver: men_educacion_clean.parquet
-  education_department_kpi: kpi_educacion_por_departamento.parquet
-  education_municipal_top10: top_10_municipios_poblacion.parquet
-
-constants:
-  date_format: "%d-%m-%Y"
-  pi: 3.141592653589793
+  # Nombres de archivo: los Silver van en paths.silver_dir y los Gold en paths.gold_dir.
+  education_silver: educacion_limpia.parquet
+  population_silver: poblacion_limpia.parquet
+  internet_silver: internet_municipio_anio.parquet
+  divipola_silver: divipola_limpia.parquet
+  indicators_gold: indicadores_municipio_anio.parquet
+  indicators_gold_csv: indicadores_municipio_anio.csv
+  quality_report: reporte_calidad.json  # En paths.logs_dir.
+  execution_metadata: metadata_ejecucion.json  # En paths.logs_dir.
+  csv_options:
+    sep: ","
+    encoding: "utf-8-sig"
+    index: false
 
 logging:
   level: INFO

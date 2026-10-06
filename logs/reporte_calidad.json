@@ -1,0 +1,1596 @@
+{
+  "version_reporte": "1.0",
+  "version_contrato": "1.0",
+  "ejecucion_id": "457c17ca-dbde-40c5-b70d-eaee1dfd3a08",
+  "etapa": "silver",
+  "estado": "exploratorio",
+  "controles_estructura": "superados",
+  "periodo": {
+    "inicio": 2018,
+    "fin": 2024
+  },
+  "fuentes": {
+    "educacion": {
+      "filas": 7850,
+      "llave": [
+        "codigo_municipio",
+        "anio"
+      ],
+      "granularidad": "territorio_anio",
+      "llaves_incompletas": 0,
+      "llaves_duplicadas": 0,
+      "codigos_distintos": 1123,
+      "filas_por_anio": {
+        "2018": 1122,
+        "2019": 1122,
+        "2020": 1121,
+        "2021": 1121,
+        "2022": 1121,
+        "2023": 1121,
+        "2024": 1122
+      },
+      "tipos_columnas": {
+        "anio": "Int64",
+        "codigo_municipio": "string",
+        "municipio": "string",
+        "codigo_departamento": "string",
+        "departamento": "string",
+        "codigo_etc": "string",
+        "etc": "string",
+        "poblacion_5_16": "Int64",
+        "tasa_matriculacion_5_16": "Float64",
+        "cobertura_neta": "Float64",
+        "cobertura_neta_transicion": "Float64",
+        "cobertura_neta_primaria": "Float64",
+        "cobertura_neta_secundaria": "Float64",
+        "cobertura_neta_media": "Float64",
+        "cobertura_bruta": "Float64",
+        "cobertura_bruta_transicion": "Float64",
+        "cobertura_bruta_primaria": "Float64",
+        "cobertura_bruta_secundaria": "Float64",
+        "cobertura_bruta_media": "Float64",
+        "tamano_promedio_de_grupo": "Float64",
+        "sedes_conectadas_a_internet": "Float64",
+        "desercion": "Float64",
+        "desercion_transicion": "Float64",
+        "desercion_primaria": "Float64",
+        "desercion_secundaria": "Float64",
+        "desercion_media": "Float64",
+        "aprobacion": "Float64",
+        "aprobacion_transicion": "Float64",
+        "aprobacion_primaria": "Float64",
+        "aprobacion_secundaria": "Float64",
+        "aprobacion_media": "Float64",
+        "reprobacion": "Float64",
+        "reprobacion_transicion": "Float64",
+        "reprobacion_primaria": "Float64",
+        "reprobacion_secundaria": "Float64",
+        "reprobacion_media": "Float64",
+        "repitencia": "Float64",
+        "repitencia_transicion": "Float64",
+        "repitencia_primaria": "Float64",
+        "repitencia_secundaria": "Float64",
+        "repitencia_media": "Float64",
+        "registro_origen": "Int64",
+        "anio_original": "string",
+        "codigo_municipio_original": "string",
+        "codigo_departamento_original": "string",
+        "poblacion_5_16_original": "string",
+        "cobertura_neta_original": "string",
+        "desercion_original": "string",
+        "reprobacion_original": "string",
+        "poblacion_5_16_no_utilizable": "boolean",
+        "estado_cobertura_neta": "string",
+        "estado_desercion": "string",
+        "estado_reprobacion": "string",
+        "departamento_inconsistente": "boolean",
+        "estado_homologacion": "string"
+      },
+      "faltantes_por_columna": {
+        "anio": 0,
+        "codigo_municipio": 0,
+        "municipio": 0,
+        "codigo_departamento": 0,
+        "departamento": 0,
+        "codigo_etc": 0,
+        "etc": 0,
+        "poblacion_5_16": 80,
+        "tasa_matriculacion_5_16": 3,
+        "cobertura_neta": 0,
+        "cobertura_neta_transicion": 0,
+        "cobertura_neta_primaria": 0,
+        "cobertura_neta_secundaria": 0,
+        "cobertura_neta_media": 0,
+        "cobertura_bruta": 0,
+        "cobertura_bruta_transicion": 0,
+        "cobertura_bruta_primaria": 0,
+        "cobertura_bruta_secundaria": 0,
+        "cobertura_bruta_media": 0,
+        "tamano_promedio_de_grupo": 7850,
+        "sedes_conectadas_a_internet": 7850,
+        "desercion": 5,
+        "desercion_transicion": 5,
+        "desercion_primaria": 5,
+        "desercion_secundaria": 12,
+        "desercion_media": 21,
+        "aprobacion": 5,
+        "aprobacion_transicion": 5,
+        "aprobacion_primaria": 5,
+        "aprobacion_secundaria": 12,
+        "aprobacion_media": 21,
+        "reprobacion": 5,
+        "reprobacion_transicion": 5,
+        "reprobacion_primaria": 5,
+        "reprobacion_secundaria": 12,
+        "reprobacion_media": 21,
+        "repitencia": 5,
+        "repitencia_transicion": 5,
+        "repitencia_primaria": 5,
+        "repitencia_secundaria": 5,
+        "repitencia_media": 5,
+        "registro_origen": 0,
+        "anio_original": 0,
+        "codigo_municipio_original": 0,
+        "codigo_departamento_original": 0,
+        "poblacion_5_16_original": 0,
+        "cobertura_neta_original": 0,
+        "desercion_original": 5,
+        "reprobacion_original": 5,
+        "poblacion_5_16_no_utilizable": 0,
+        "estado_cobertura_neta": 0,
+        "estado_desercion": 0,
+        "estado_reprobacion": 0,
+        "departamento_inconsistente": 0,
+        "estado_homologacion": 0
+      },
+      "estados": {
+        "estado_cobertura_neta": {
+          "disponible": 6866,
+          "pendiente_revision": 984
+        },
+        "estado_desercion": {
+          "disponible": 7845,
+          "faltante": 5
+        },
+        "estado_reprobacion": {
+          "disponible": 7845,
+          "faltante": 5
+        },
+        "estado_homologacion": {
+          "pendiente_revision": 7850
+        }
+      },
+      "criticas_en_fuente": {
+        "cobertura_neta": {
+          "denominador": 7850,
+          "numerador_presencia_numerica": 7850,
+          "porcentaje_presencia_numerica": 100.0,
+          "numerador_utilizables_fuente": 6866,
+          "porcentaje_utilizables_fuente": 87.46496815286623
+        },
+        "desercion": {
+          "denominador": 7850,
+          "numerador_presencia_numerica": 7845,
+          "porcentaje_presencia_numerica": 99.93630573248407,
+          "numerador_utilizables_fuente": 7845,
+          "porcentaje_utilizables_fuente": 99.93630573248407
+        },
+        "reprobacion": {
+          "denominador": 7850,
+          "numerador_presencia_numerica": 7845,
+          "porcentaje_presencia_numerica": 99.93630573248407,
+          "numerador_utilizables_fuente": 7845,
+          "porcentaje_utilizables_fuente": 99.93630573248407
+        }
+      },
+      "controles_adicionales": {
+        "poblacion_5_16_no_utilizable": 80,
+        "departamento_inconsistente": 0
+      },
+      "reporte_transformacion": {
+        "filas_entrada": 15707,
+        "registros_nacionales_separados": 3,
+        "registros_territoriales_fuera_periodo": 7854,
+        "periodo": {
+          "inicio": 2018,
+          "fin": 2024
+        },
+        "columnas_renombradas": {
+          "AÑO": "anio",
+          "CÓDIGO_MUNICIPIO": "codigo_municipio",
+          "MUNICIPIO": "municipio",
+          "CÓDIGO_DEPARTAMENTO": "codigo_departamento",
+          "DEPARTAMENTO": "departamento",
+          "CÓDIGO_ETC": "codigo_etc",
+          "ETC": "etc",
+          "POBLACIÓN_5_16": "poblacion_5_16",
+          "TASA_MATRICULACIÓN_5_16": "tasa_matriculacion_5_16",
+          "COBERTURA_NETA": "cobertura_neta",
+          "COBERTURA_NETA_TRANSICIÓN": "cobertura_neta_transicion",
+          "COBERTURA_NETA_PRIMARIA": "cobertura_neta_primaria",
+          "COBERTURA_NETA_SECUNDARIA": "cobertura_neta_secundaria",
+          "COBERTURA_NETA_MEDIA": "cobertura_neta_media",
+          "COBERTURA_BRUTA": "cobertura_bruta",
+          "COBERTURA_BRUTA_TRANSICIÓN": "cobertura_bruta_transicion",
+          "COBERTURA_BRUTA_PRIMARIA": "cobertura_bruta_primaria",
+          "COBERTURA_BRUTA_SECUNDARIA": "cobertura_bruta_secundaria",
+          "COBERTURA_BRUTA_MEDIA": "cobertura_bruta_media",
+          "TAMAÑO_PROMEDIO_DE_GRUPO": "tamano_promedio_de_grupo",
+          "SEDES_CONECTADAS_A_INTERNET": "sedes_conectadas_a_internet",
+          "DESERCIÓN": "desercion",
+          "DESERCIÓN_TRANSICIÓN": "desercion_transicion",
+          "DESERCIÓN_PRIMARIA": "desercion_primaria",
+          "DESERCIÓN_SECUNDARIA": "desercion_secundaria",
+          "DESERCIÓN_MEDIA": "desercion_media",
+          "APROBACIÓN": "aprobacion",
+          "APROBACIÓN_TRANSICIÓN": "aprobacion_transicion",
+          "APROBACIÓN_PRIMARIA": "aprobacion_primaria",
+          "APROBACIÓN_SECUNDARIA": "aprobacion_secundaria",
+          "APROBACIÓN_MEDIA": "aprobacion_media",
+          "REPROBACIÓN": "reprobacion",
+          "REPROBACIÓN_TRANSICIÓN": "reprobacion_transicion",
+          "REPROBACIÓN_PRIMARIA": "reprobacion_primaria",
+          "REPROBACIÓN_SECUNDARIA": "reprobacion_secundaria",
+          "REPROBACIÓN_MEDIA": "reprobacion_media",
+          "REPITENCIA": "repitencia",
+          "REPITENCIA_TRANSICIÓN": "repitencia_transicion",
+          "REPITENCIA_PRIMARIA": "repitencia_primaria",
+          "REPITENCIA_SECUNDARIA": "repitencia_secundaria",
+          "REPITENCIA_MEDIA": "repitencia_media"
+        },
+        "filas_salida": 7850,
+        "filas_por_anio": {
+          "2018": 1122,
+          "2019": 1122,
+          "2020": 1121,
+          "2021": 1121,
+          "2022": 1121,
+          "2023": 1121,
+          "2024": 1122
+        },
+        "claves_duplicadas": 0,
+        "poblacion_5_16_miles_corregidos": 846,
+        "poblacion_5_16_miles_por_separador": {
+          "coma": 1,
+          "punto": 845
+        },
+        "conversiones_no_numericas": {
+          "aprobacion": 0,
+          "aprobacion_media": 0,
+          "aprobacion_primaria": 0,
+          "aprobacion_secundaria": 0,
+          "aprobacion_transicion": 0,
+          "cobertura_bruta": 0,
+          "cobertura_bruta_media": 0,
+          "cobertura_bruta_primaria": 0,
+          "cobertura_bruta_secundaria": 0,
+          "cobertura_bruta_transicion": 0,
+          "cobertura_neta": 0,
+          "cobertura_neta_media": 0,
+          "cobertura_neta_primaria": 0,
+          "cobertura_neta_secundaria": 0,
+          "cobertura_neta_transicion": 0,
+          "desercion": 0,
+          "desercion_media": 0,
+          "desercion_primaria": 0,
+          "desercion_secundaria": 0,
+          "desercion_transicion": 0,
+          "poblacion_5_16": 0,
+          "repitencia": 0,
+          "repitencia_media": 0,
+          "repitencia_primaria": 0,
+          "repitencia_secundaria": 0,
+          "repitencia_transicion": 0,
+          "reprobacion": 0,
+          "reprobacion_media": 0,
+          "reprobacion_primaria": 0,
+          "reprobacion_secundaria": 0,
+          "reprobacion_transicion": 0,
+          "sedes_conectadas_a_internet": 0,
+          "tamano_promedio_de_grupo": 0,
+          "tasa_matriculacion_5_16": 0
+        },
+        "departamentos_inconsistentes": 0,
+        "poblaciones_escolares_no_utilizables": 80,
+        "coberturas_brutas_superiores_100_informativo": 3185,
+        "completitud_criticas_educativas": {
+          "cobertura_neta": {
+            "denominador": 7850,
+            "valores_numericos_presentes": 7850,
+            "valores_utilizables": 6866,
+            "porcentaje_presencia_numerica": 100.0,
+            "porcentaje_utilizables": 87.46496815286623
+          },
+          "desercion": {
+            "denominador": 7850,
+            "valores_numericos_presentes": 7845,
+            "valores_utilizables": 7845,
+            "porcentaje_presencia_numerica": 99.93630573248407,
+            "porcentaje_utilizables": 99.93630573248407
+          },
+          "reprobacion": {
+            "denominador": 7850,
+            "valores_numericos_presentes": 7845,
+            "valores_utilizables": 7845,
+            "porcentaje_presencia_numerica": 99.93630573248407,
+            "porcentaje_utilizables": 99.93630573248407
+          }
+        },
+        "conjunto_educativo": {
+          "denominador": 7850,
+          "filas_con_tres_valores_numericos": 7845,
+          "filas_con_tres_valores_utilizables": 6861,
+          "porcentaje_presencia_numerica": 99.93630573248407,
+          "porcentaje_utilizables": 87.40127388535032
+        },
+        "columnas_nuevas_no_tipificadas": [],
+        "faltantes_por_columna": {
+          "anio": 0,
+          "codigo_municipio": 0,
+          "municipio": 0,
+          "codigo_departamento": 0,
+          "departamento": 0,
+          "codigo_etc": 0,
+          "etc": 0,
+          "poblacion_5_16": 80,
+          "tasa_matriculacion_5_16": 3,
+          "cobertura_neta": 0,
+          "cobertura_neta_transicion": 0,
+          "cobertura_neta_primaria": 0,
+          "cobertura_neta_secundaria": 0,
+          "cobertura_neta_media": 0,
+          "cobertura_bruta": 0,
+          "cobertura_bruta_transicion": 0,
+          "cobertura_bruta_primaria": 0,
+          "cobertura_bruta_secundaria": 0,
+          "cobertura_bruta_media": 0,
+          "tamano_promedio_de_grupo": 7850,
+          "sedes_conectadas_a_internet": 7850,
+          "desercion": 5,
+          "desercion_transicion": 5,
+          "desercion_primaria": 5,
+          "desercion_secundaria": 12,
+          "desercion_media": 21,
+          "aprobacion": 5,
+          "aprobacion_transicion": 5,
+          "aprobacion_primaria": 5,
+          "aprobacion_secundaria": 12,
+          "aprobacion_media": 21,
+          "reprobacion": 5,
+          "reprobacion_transicion": 5,
+          "reprobacion_primaria": 5,
+          "reprobacion_secundaria": 12,
+          "reprobacion_media": 21,
+          "repitencia": 5,
+          "repitencia_transicion": 5,
+          "repitencia_primaria": 5,
+          "repitencia_secundaria": 5,
+          "repitencia_media": 5
+        },
+        "estados_indicadores": {
+          "cobertura_neta": {
+            "disponible": 6866,
+            "pendiente_revision": 984
+          },
+          "desercion": {
+            "disponible": 7845,
+            "faltante": 5
+          },
+          "reprobacion": {
+            "disponible": 7845,
+            "faltante": 5
+          }
+        },
+        "valores_numericos_negativos": {
+          "aprobacion": 0,
+          "aprobacion_media": 0,
+          "aprobacion_primaria": 0,
+          "aprobacion_secundaria": 0,
+          "aprobacion_transicion": 0,
+          "cobertura_bruta": 0,
+          "cobertura_bruta_media": 0,
+          "cobertura_bruta_primaria": 0,
+          "cobertura_bruta_secundaria": 0,
+          "cobertura_bruta_transicion": 0,
+          "cobertura_neta": 0,
+          "cobertura_neta_media": 0,
+          "cobertura_neta_primaria": 0,
+          "cobertura_neta_secundaria": 0,
+          "cobertura_neta_transicion": 0,
+          "desercion": 0,
+          "desercion_media": 0,
+          "desercion_primaria": 0,
+          "desercion_secundaria": 0,
+          "desercion_transicion": 0,
+          "poblacion_5_16": 0,
+          "repitencia": 0,
+          "repitencia_media": 0,
+          "repitencia_primaria": 0,
+          "repitencia_secundaria": 0,
+          "repitencia_transicion": 0,
+          "reprobacion": 0,
+          "reprobacion_media": 0,
+          "reprobacion_primaria": 0,
+          "reprobacion_secundaria": 0,
+          "reprobacion_transicion": 0,
+          "sedes_conectadas_a_internet": 0,
+          "tamano_promedio_de_grupo": 0,
+          "tasa_matriculacion_5_16": 0
+        },
+        "rangos_numericos": {
+          "aprobacion": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "aprobacion_media": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "aprobacion_primaria": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "aprobacion_secundaria": {
+            "min": 0.0,
+            "max": 100.0
+          },
+          "aprobacion_transicion": {
+            "min": 0.0,
+            "max": 52.71
+          },
+          "cobertura_bruta": {
+            "min": 0.0,
+            "max": 210.11
+          },
+          "cobertura_bruta_media": {
+            "min": 0.0,
+            "max": 489.62
+          },
+          "cobertura_bruta_primaria": {
+            "min": 0.0,
+            "max": 246.83
+          },
+          "cobertura_bruta_secundaria": {
+            "min": 0.0,
+            "max": 258.59
+          },
+          "cobertura_bruta_transicion": {
+            "min": 0.0,
+            "max": 239.13
+          },
+          "cobertura_neta": {
+            "min": 0.0,
+            "max": 199.98
+          },
+          "cobertura_neta_media": {
+            "min": 0.0,
+            "max": 143.71
+          },
+          "cobertura_neta_primaria": {
+            "min": 0.0,
+            "max": 226.1
+          },
+          "cobertura_neta_secundaria": {
+            "min": 0.0,
+            "max": 198.49
+          },
+          "cobertura_neta_transicion": {
+            "min": 0.0,
+            "max": 136.21
+          },
+          "desercion": {
+            "min": 0.0,
+            "max": 27.9
+          },
+          "desercion_media": {
+            "min": 0.0,
+            "max": 62.5
+          },
+          "desercion_primaria": {
+            "min": 0.0,
+            "max": 18.31
+          },
+          "desercion_secundaria": {
+            "min": 0.0,
+            "max": 47.14
+          },
+          "desercion_transicion": {
+            "min": 0.0,
+            "max": 42.86
+          },
+          "poblacion_5_16": {
+            "min": 1.0,
+            "max": 1181597.0
+          },
+          "repitencia": {
+            "min": 0.0,
+            "max": 37.47
+          },
+          "repitencia_media": {
+            "min": 0.0,
+            "max": 36.84
+          },
+          "repitencia_primaria": {
+            "min": 0.0,
+            "max": 50.76
+          },
+          "repitencia_secundaria": {
+            "min": 0.0,
+            "max": 55.07
+          },
+          "repitencia_transicion": {
+            "min": 0.0,
+            "max": 66.67
+          },
+          "reprobacion": {
+            "min": 0.0,
+            "max": 49.39
+          },
+          "reprobacion_media": {
+            "min": 0.0,
+            "max": 67.86
+          },
+          "reprobacion_primaria": {
+            "min": 0.0,
+            "max": 51.97
+          },
+          "reprobacion_secundaria": {
+            "min": 0.0,
+            "max": 76.97
+          },
+          "reprobacion_transicion": {
+            "min": 0.0,
+            "max": 52.71
+          },
+          "sedes_conectadas_a_internet": {
+            "min": null,
+            "max": null
+          },
+          "tamano_promedio_de_grupo": {
+            "min": null,
+            "max": null
+          },
+          "tasa_matriculacion_5_16": {
+            "min": 0.0,
+            "max": 279.03
+          }
+        }
+      }
+    },
+    "poblacion": {
+      "filas": 7861,
+      "llave": [
+        "codigo_municipio",
+        "anio"
+      ],
+      "granularidad": "territorio_anio",
+      "llaves_incompletas": 0,
+      "llaves_duplicadas": 0,
+      "codigos_distintos": 1123,
+      "filas_por_anio": {
+        "2018": 1123,
+        "2019": 1123,
+        "2020": 1123,
+        "2021": 1123,
+        "2022": 1123,
+        "2023": 1123,
+        "2024": 1123
+      },
+      "tipos_columnas": {
+        "codigo_municipio": "string",
+        "anio": "Int64",
+        "codigo_departamento": "string",
+        "municipio": "string",
+        "departamento": "string",
+        "poblacion_total": "Int64",
+        "poblacion_cabecera": "Int64",
+        "poblacion_centros_rural": "Int64",
+        "poblacion_total_original": "string",
+        "poblacion_cabecera_original": "string",
+        "poblacion_centros_rural_original": "string",
+        "fila_excel_total": "Int64",
+        "fila_excel_cabecera": "Int64",
+        "fila_excel_centros_rural": "Int64",
+        "codigo_municipio_original": "string",
+        "codigo_departamento_original": "string",
+        "areas_incompletas": "bool",
+        "suma_componentes": "Int64",
+        "diferencia_componentes": "Int64",
+        "poblacion_consistente": "boolean",
+        "departamento_inconsistente": "boolean",
+        "metadatos_incompletos": "bool",
+        "revision_territorial_pendiente": "bool",
+        "estado_poblacion": "string",
+        "denominador_positivo": "boolean",
+        "poblacion_para_ratios_utilizable": "boolean",
+        "estado_homologacion": "string"
+      },
+      "faltantes_por_columna": {
+        "codigo_municipio": 0,
+        "anio": 0,
+        "codigo_departamento": 0,
+        "municipio": 0,
+        "departamento": 0,
+        "poblacion_total": 0,
+        "poblacion_cabecera": 0,
+        "poblacion_centros_rural": 0,
+        "poblacion_total_original": 0,
+        "poblacion_cabecera_original": 0,
+        "poblacion_centros_rural_original": 0,
+        "fila_excel_total": 0,
+        "fila_excel_cabecera": 0,
+        "fila_excel_centros_rural": 0,
+        "codigo_municipio_original": 0,
+        "codigo_departamento_original": 0,
+        "areas_incompletas": 0,
+        "suma_componentes": 0,
+        "diferencia_componentes": 0,
+        "poblacion_consistente": 0,
+        "departamento_inconsistente": 0,
+        "metadatos_incompletos": 0,
+        "revision_territorial_pendiente": 0,
+        "estado_poblacion": 0,
+        "denominador_positivo": 0,
+        "poblacion_para_ratios_utilizable": 0,
+        "estado_homologacion": 0
+      },
+      "estados": {
+        "estado_poblacion": {
+          "disponible": 7833,
+          "pendiente_revision": 28
+        },
+        "estado_homologacion": {
+          "pendiente_revision": 7861
+        }
+      },
+      "criticas_en_fuente": {
+        "poblacion_total": {
+          "denominador": 7861,
+          "numerador_presencia_numerica": 7861,
+          "porcentaje_presencia_numerica": 100.0,
+          "numerador_utilizables_fuente": 7833,
+          "porcentaje_utilizables_fuente": 99.64381121994657
+        },
+        "poblacion_centros_rural": {
+          "denominador": 7861,
+          "numerador_presencia_numerica": 7861,
+          "porcentaje_presencia_numerica": 100.0,
+          "numerador_utilizables_fuente": 7833,
+          "porcentaje_utilizables_fuente": 99.64381121994657
+        }
+      },
+      "controles_adicionales": {
+        "areas_incompletas": 0,
+        "poblacion_consistente": 7861,
+        "departamento_inconsistente": 0,
+        "metadatos_incompletos": 0,
+        "revision_territorial_pendiente": 28,
+        "denominador_positivo": 7850,
+        "poblacion_para_ratios_utilizable": 7833
+      },
+      "reporte_transformacion": {
+        "filas_entrada": 84234,
+        "filas_vacias": 5,
+        "notas_archivo": [
+          {
+            "fila_excel": 84239,
+            "texto": "Fuente: DANE, Proyecciones de población - Dirección técnica de Censos y Demografía (DCD)"
+          },
+          {
+            "fila_excel": 84240,
+            "texto": "Nota: Desde el 1 de diciembre de 2019 comenzó a regir la Ordenanza 248 de 2019 de la Asamblea Departamental de Guainía que crea el municipio de Barrancominas, conformado por las áreas no municipalizadas de Barrancominas y Mapiripana."
+          },
+          {
+            "fila_excel": 84241,
+            "texto": "Nota:  A partir del decreto 0284 del 26 de diciembre de 2023 y de la Ordenanza No. 180 del 27 de junio de 2023, por la cual se crea el municipio de Nuevo Belén de Bajirá, segregado del municipio de Riosucio, el Departamento Administrativo Nacional de Estadística -DANE- ha incorporado el nuevo municipio a la DIVIPOLA; una vez el Instituto Geográfico Agustín Codazzi – IGAC culmine el proceso de deslinde respectivo y elabore la cartografía oficial con esta nueva entidad territorial, el DANE procederá con la actualización del Marco Geoestadístico Nacional y las actualizaciones cartográficas a que haya lugar, con el propósito de ajustar la certificación de población indígena en los resguardos del municipio en mención."
+          },
+          {
+            "fila_excel": 84242,
+            "texto": "Actualizado el 30 de Julio de 2025"
+          }
+        ],
+        "origen_excel": {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\PPED-AreaMun-2018-2042_VP.xlsx",
+          "hoja": "PobMunicipalxÁrea",
+          "header": 7,
+          "fila_encabezado_excel": 8,
+          "preambulo": [
+            {
+              "fila_excel": 3,
+              "valores": [
+                "PROYECCIONES DE POBLACIÓN Y ESTUDIOS DEMOGRÁFICOS (PPED)",
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fila_excel": 5,
+              "valores": [
+                "MUNICIPAL. PROYECCIONES DE POBLACIÓN POR ÁREA GEOGRÁFICA, PERIODO 2018-2042",
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            {
+              "fila_excel": 7,
+              "valores": [
+                "PROYECCIONES DE POBLACIÓN POR ÁREA. AÑOS 2018 A 2042",
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          ]
+        },
+        "periodo": {
+          "inicio": 2018,
+          "fin": 2024
+        },
+        "columnas_renombradas": {
+          "DP": "codigo_departamento",
+          "DPNOM": "departamento",
+          "MPIO": "codigo_municipio",
+          "DPMP": "municipio",
+          "AÑO": "anio",
+          "ÁREA GEOGRÁFICA": "area_geografica",
+          "TOTAL": "poblacion"
+        },
+        "filas_datos": 84225,
+        "filas_fuera_periodo": 60642,
+        "filas_seleccionadas": 23583,
+        "filas_salida": 7861,
+        "claves_duplicadas": 0,
+        "filas_por_anio": {
+          "2018": 1123,
+          "2019": 1123,
+          "2020": 1123,
+          "2021": 1123,
+          "2022": 1123,
+          "2023": 1123,
+          "2024": 1123
+        },
+        "areas_incompletas": 0,
+        "filas_con_componentes_no_utilizables": 0,
+        "componentes_inconsistentes": 0,
+        "departamentos_inconsistentes": 0,
+        "metadatos_incompletos": 0,
+        "conversiones_poblacion": {
+          "faltantes": 0,
+          "no_numericas": 0,
+          "no_finitas": 0,
+          "negativas": 0,
+          "fraccionarias": 0
+        },
+        "poblaciones_en_cero": {
+          "poblacion_total": 11,
+          "poblacion_cabecera": 141,
+          "poblacion_centros_rural": 11
+        },
+        "poblacion_total_cero": 11,
+        "denominadores_positivos": 7850,
+        "poblaciones_para_ratios_utilizables": 7833,
+        "codigos_revision_territorial": [
+          "27493",
+          "27615",
+          "94343",
+          "94663"
+        ],
+        "casos_revision_territorial": [
+          {
+            "codigo_municipio": "27493",
+            "anio": 2018,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2019,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2020,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2021,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2022,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2023,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27493",
+            "anio": 2024,
+            "municipio": "Nuevo Belén de Bajirá",
+            "poblacion_total": 29812,
+            "poblacion_cabecera": 12412,
+            "poblacion_centros_rural": 17400,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2018,
+            "municipio": "Riosucio",
+            "poblacion_total": 53441,
+            "poblacion_cabecera": 14289,
+            "poblacion_centros_rural": 39152,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2019,
+            "municipio": "Riosucio",
+            "poblacion_total": 55472,
+            "poblacion_cabecera": 14680,
+            "poblacion_centros_rural": 40792,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2020,
+            "municipio": "Riosucio",
+            "poblacion_total": 57468,
+            "poblacion_cabecera": 14611,
+            "poblacion_centros_rural": 42857,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2021,
+            "municipio": "Riosucio",
+            "poblacion_total": 58540,
+            "poblacion_cabecera": 14693,
+            "poblacion_centros_rural": 43847,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2022,
+            "municipio": "Riosucio",
+            "poblacion_total": 59387,
+            "poblacion_cabecera": 14834,
+            "poblacion_centros_rural": 44553,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2023,
+            "municipio": "Riosucio",
+            "poblacion_total": 60070,
+            "poblacion_cabecera": 14932,
+            "poblacion_centros_rural": 45138,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "27615",
+            "anio": 2024,
+            "municipio": "Riosucio",
+            "poblacion_total": 30082,
+            "poblacion_cabecera": 14935,
+            "poblacion_centros_rural": 15147,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2018,
+            "municipio": "Barrancominas",
+            "poblacion_total": 8076,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 8076,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2019,
+            "municipio": "Barrancominas",
+            "poblacion_total": 8514,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 8514,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2020,
+            "municipio": "Barrancominas",
+            "poblacion_total": 9960,
+            "poblacion_cabecera": 1088,
+            "poblacion_centros_rural": 8872,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2021,
+            "municipio": "Barrancominas",
+            "poblacion_total": 10321,
+            "poblacion_cabecera": 1103,
+            "poblacion_centros_rural": 9218,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2022,
+            "municipio": "Barrancominas",
+            "poblacion_total": 10679,
+            "poblacion_cabecera": 1149,
+            "poblacion_centros_rural": 9530,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2023,
+            "municipio": "Barrancominas",
+            "poblacion_total": 11030,
+            "poblacion_cabecera": 1180,
+            "poblacion_centros_rural": 9850,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94343",
+            "anio": 2024,
+            "municipio": "Barrancominas",
+            "poblacion_total": 11359,
+            "poblacion_cabecera": 1226,
+            "poblacion_centros_rural": 10133,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2018,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 1025,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 1025,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2019,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 1032,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 1032,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2020,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2021,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2022,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2023,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          },
+          {
+            "codigo_municipio": "94663",
+            "anio": 2024,
+            "municipio": "Mapiripana (ANM)",
+            "poblacion_total": 0,
+            "poblacion_cabecera": 0,
+            "poblacion_centros_rural": 0,
+            "estado_poblacion": "pendiente_revision"
+          }
+        ],
+        "estados_poblacion": {
+          "disponible": 7833,
+          "pendiente_revision": 28
+        },
+        "faltantes_por_columna_poblacional": {
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0
+        }
+      }
+    },
+    "internet": {
+      "filas": 7815,
+      "llave": [
+        "codigo_municipio",
+        "anio"
+      ],
+      "granularidad": "territorio_anio",
+      "llaves_incompletas": 0,
+      "llaves_duplicadas": 0,
+      "codigos_distintos": 1123,
+      "filas_por_anio": {
+        "2018": 1108,
+        "2019": 1116,
+        "2020": 1118,
+        "2021": 1117,
+        "2022": 1118,
+        "2023": 1116,
+        "2024": 1122
+      },
+      "tipos_columnas": {
+        "codigo_municipio": "string",
+        "anio": "Int64",
+        "codigo_departamento": "string",
+        "municipio": "string",
+        "departamento": "string",
+        "accesos_t4": "Int64",
+        "accesos_validos_parcial": "Int64",
+        "trimestre_referencia": "Int64",
+        "registros_fuente": "Int64",
+        "registros_accesos_no_utilizables": "Int64",
+        "registro_origen_min": "Int64",
+        "registro_origen_max": "Int64",
+        "revision_territorial_pendiente": "boolean",
+        "departamento_inconsistente": "boolean",
+        "metadatos_reporte_pendientes": "boolean",
+        "segmento_pendiente_revision": "boolean",
+        "estado_internet": "string",
+        "accesos_para_indicadores_utilizables": "boolean",
+        "estado_homologacion": "string",
+        "codigos_municipio_originales": "string",
+        "nombres_municipio_originales": "string",
+        "codigos_departamento_originales": "string",
+        "nombres_departamento_originales": "string",
+        "segmentos_originales": "string",
+        "tecnologias_originales": "string"
+      },
+      "faltantes_por_columna": {
+        "codigo_municipio": 0,
+        "anio": 0,
+        "codigo_departamento": 0,
+        "municipio": 0,
+        "departamento": 0,
+        "accesos_t4": 0,
+        "accesos_validos_parcial": 0,
+        "trimestre_referencia": 0,
+        "registros_fuente": 0,
+        "registros_accesos_no_utilizables": 0,
+        "registro_origen_min": 0,
+        "registro_origen_max": 0,
+        "revision_territorial_pendiente": 0,
+        "departamento_inconsistente": 0,
+        "metadatos_reporte_pendientes": 0,
+        "segmento_pendiente_revision": 0,
+        "estado_internet": 0,
+        "accesos_para_indicadores_utilizables": 0,
+        "estado_homologacion": 0,
+        "codigos_municipio_originales": 0,
+        "nombres_municipio_originales": 0,
+        "codigos_departamento_originales": 0,
+        "nombres_departamento_originales": 0,
+        "segmentos_originales": 0,
+        "tecnologias_originales": 0
+      },
+      "estados": {
+        "estado_internet": {
+          "disponible": 7666,
+          "pendiente_revision": 149
+        },
+        "estado_homologacion": {
+          "pendiente_revision": 7815
+        }
+      },
+      "criticas_en_fuente": {
+        "accesos_t4": {
+          "denominador": 7815,
+          "numerador_presencia_numerica": 7815,
+          "porcentaje_presencia_numerica": 100.0,
+          "numerador_utilizables_fuente": 7666,
+          "porcentaje_utilizables_fuente": 98.0934101087652
+        }
+      },
+      "controles_adicionales": {
+        "revision_territorial_pendiente": 17,
+        "departamento_inconsistente": 0,
+        "metadatos_reporte_pendientes": 0,
+        "segmento_pendiente_revision": 132,
+        "accesos_para_indicadores_utilizables": 7666
+      },
+      "reporte_transformacion": {
+        "filas_entrada": 3288251,
+        "bloques_leidos": 33,
+        "filas_fuera_periodo": 684132,
+        "filas_otros_trimestres_periodo": 1938951,
+        "filas_nacionales_globales": 3,
+        "filas_nacionales_t4_separados": 0,
+        "filas_seleccionadas": 665168,
+        "accesos_no_utilizables_globales": 0,
+        "accesos_cero_globales": 5360,
+        "accesos_cero_seleccionados": 1156,
+        "tecnologia_na_global": 129,
+        "tecnologia_na_seleccionada": 15,
+        "filas_salida": 7815,
+        "claves_duplicadas": 0,
+        "alcance_control_duplicados": "llave_detalle_todos_los_bloques_del_archivo",
+        "origen_csv": {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\ACCESOS_INTERNET_FIJO_2_8.csv",
+          "separador": ";",
+          "codificacion": "utf-8",
+          "chunksize": 100000,
+          "fecha_descarga": null
+        },
+        "periodo": {
+          "inicio": 2018,
+          "fin": 2024
+        },
+        "trimestre_referencia": 4,
+        "filas_por_anio": {
+          "2018": 1108,
+          "2019": 1116,
+          "2020": 1118,
+          "2021": 1117,
+          "2022": 1118,
+          "2023": 1116,
+          "2024": 1122
+        },
+        "resumen_anual_accesos": [
+          {
+            "anio": 2018,
+            "territorios": 1108,
+            "accesos": 6731666,
+            "registros_fuente": 62368
+          },
+          {
+            "anio": 2019,
+            "territorios": 1116,
+            "accesos": 6984242,
+            "registros_fuente": 77860
+          },
+          {
+            "anio": 2020,
+            "territorios": 1118,
+            "accesos": 7837355,
+            "registros_fuente": 87073
+          },
+          {
+            "anio": 2021,
+            "territorios": 1117,
+            "accesos": 8454845,
+            "registros_fuente": 103916
+          },
+          {
+            "anio": 2022,
+            "territorios": 1118,
+            "accesos": 8841612,
+            "registros_fuente": 110439
+          },
+          {
+            "anio": 2023,
+            "territorios": 1116,
+            "accesos": 9064552,
+            "registros_fuente": 113846
+          },
+          {
+            "anio": 2024,
+            "territorios": 1122,
+            "accesos": 9278294,
+            "registros_fuente": 109666
+          }
+        ],
+        "estados_internet": {
+          "disponible": 7666,
+          "pendiente_revision": 149
+        },
+        "filas_revision_territorial": 17,
+        "filas_segmento_pendiente": 132,
+        "filas_metadatos_pendientes": 0,
+        "filas_departamento_inconsistente": 0,
+        "filas_accesos_no_utilizables": 0,
+        "ejemplos_accesos_invalidos": [],
+        "ejemplos_nacionales": [
+          {
+            "registro_origen": 44300,
+            "ANNO": "2017",
+            "TRIMESTRE": "2",
+            "ID_MUNICIPIO": "0",
+            "MUNICIPIO": "COLOMBIA"
+          },
+          {
+            "registro_origen": 81946,
+            "ANNO": "2017",
+            "TRIMESTRE": "3",
+            "ID_MUNICIPIO": "0",
+            "MUNICIPIO": "COLOMBIA"
+          },
+          {
+            "registro_origen": 98661,
+            "ANNO": "2017",
+            "TRIMESTRE": "3",
+            "ID_MUNICIPIO": "0",
+            "MUNICIPIO": "COLOMBIA"
+          }
+        ],
+        "faltantes_por_columna": {
+          "ANNO": 0,
+          "TRIMESTRE": 0,
+          "ID_EMPRESA": 0,
+          "EMPRESA": 0,
+          "ID_MUNICIPIO": 0,
+          "MUNICIPIO": 0,
+          "ID_DEPARTAMENTO": 0,
+          "DEPARTAMENTO": 0,
+          "ID_SEGMENTO": 0,
+          "SEGMENTO": 0,
+          "VELOCIDAD_EFECTIVA_DOWNSTREAM": 0,
+          "VELOCIDAD_EFECTIVA_UPSTREAM": 0,
+          "ID_TECNOLOGIA": 0,
+          "TECNOLOGIA": 0,
+          "ACCESOS": 0
+        },
+        "segmentos_observados": [
+          {
+            "id": "101",
+            "nombre": "Residencial - Estrato 1",
+            "registros": 105981
+          },
+          {
+            "id": "102",
+            "nombre": "Residencial - Estrato 2",
+            "registros": 136449
+          },
+          {
+            "id": "103",
+            "nombre": "Residencial - Estrato 3",
+            "registros": 89597
+          },
+          {
+            "id": "104",
+            "nombre": "Residencial - Estrato 4",
+            "registros": 45983
+          },
+          {
+            "id": "105",
+            "nombre": "Residencial - Estrato 5",
+            "registros": 22818
+          },
+          {
+            "id": "106",
+            "nombre": "Residencial - Estrato 6",
+            "registros": 18133
+          },
+          {
+            "id": "107",
+            "nombre": "Corporativo",
+            "registros": 229620
+          },
+          {
+            "id": "108",
+            "nombre": "Sin estratificar",
+            "registros": 13677
+          },
+          {
+            "id": "109",
+            "nombre": "Uso propio interno del operador",
+            "registros": 2472
+          },
+          {
+            "id": "117",
+            "nombre": "Corporativo  (accesos adicionales)",
+            "registros": 438
+          }
+        ],
+        "tecnologias_observadas": [
+          {
+            "id": "0",
+            "nombre": "NA",
+            "registros": 15
+          },
+          {
+            "id": "101",
+            "nombre": "xDSL",
+            "registros": 94223
+          },
+          {
+            "id": "102",
+            "nombre": "Cable",
+            "registros": 107699
+          },
+          {
+            "id": "103",
+            "nombre": "Satelital",
+            "registros": 45732
+          },
+          {
+            "id": "104",
+            "nombre": "WiFi",
+            "registros": 31715
+          },
+          {
+            "id": "105",
+            "nombre": "WiMAX",
+            "registros": 4903
+          },
+          {
+            "id": "106",
+            "nombre": "Hybrid Fiber Coaxial (HFC)",
+            "registros": 53711
+          },
+          {
+            "id": "107",
+            "nombre": "Otras tecnologías de fibra (antes FTTx)",
+            "registros": 40440
+          },
+          {
+            "id": "108",
+            "nombre": "Fiber to the home (FTTH)",
+            "registros": 196588
+          },
+          {
+            "id": "109",
+            "nombre": "Fiber to the node (FTTN)",
+            "registros": 769
+          },
+          {
+            "id": "110",
+            "nombre": "Fiber to the cabinet (FTTC)",
+            "registros": 2848
+          },
+          {
+            "id": "111",
+            "nombre": "Fiber to the building o fiber to the basement (FTTB)",
+            "registros": 6023
+          },
+          {
+            "id": "112",
+            "nombre": "Fiber to the antenna (FTTA)",
+            "registros": 504
+          },
+          {
+            "id": "113",
+            "nombre": "Fiber to the premises",
+            "registros": 4794
+          },
+          {
+            "id": "114",
+            "nombre": "Otras tecnologías inalámbricas",
+            "registros": 73378
+          },
+          {
+            "id": "115",
+            "nombre": "Otras tecnologías fijas",
+            "registros": 1826
+          }
+        ],
+        "controles_velocidades": {
+          "VELOCIDAD_EFECTIVA_DOWNSTREAM": {
+            "no_utilizables": 0,
+            "ceros": 2380
+          },
+          "VELOCIDAD_EFECTIVA_UPSTREAM": {
+            "no_utilizables": 0,
+            "ceros": 2779
+          }
+        },
+        "columnas_nuevas_no_agregadas": [],
+        "velocidad_ponderada_calculada": false,
+        "participacion_fibra_calculada": false
+      }
+    },
+    "divipola": {
+      "filas": 1122,
+      "llave": [
+        "codigo_municipio"
+      ],
+      "granularidad": "catalogo_territorial",
+      "llaves_incompletas": 0,
+      "llaves_duplicadas": 0,
+      "codigos_distintos": 1122,
+      "filas_por_anio": {},
+      "tipos_columnas": {
+        "codigo_municipio": "string",
+        "municipio": "string",
+        "codigo_departamento": "string",
+        "departamento": "string",
+        "tipo_territorio": "string",
+        "longitud": "Float64",
+        "latitud": "Float64",
+        "registro_origen": "Int64",
+        "codigo_municipio_original": "string",
+        "municipio_original": "string",
+        "codigo_departamento_original": "string",
+        "departamento_original": "string",
+        "tipo_territorio_original": "string",
+        "longitud_original": "string",
+        "latitud_original": "string",
+        "tipo_no_resuelto": "boolean",
+        "departamento_inconsistente": "boolean",
+        "metadatos_incompletos": "bool",
+        "departamento_nombre_inconsistente": "bool",
+        "estado_catalogo": "string",
+        "estado_longitud": "string",
+        "estado_latitud": "string",
+        "coordenadas_utilizables": "boolean"
+      },
+      "faltantes_por_columna": {
+        "codigo_municipio": 0,
+        "municipio": 0,
+        "codigo_departamento": 0,
+        "departamento": 0,
+        "tipo_territorio": 0,
+        "longitud": 0,
+        "latitud": 0,
+        "registro_origen": 0,
+        "codigo_municipio_original": 0,
+        "municipio_original": 0,
+        "codigo_departamento_original": 0,
+        "departamento_original": 0,
+        "tipo_territorio_original": 0,
+        "longitud_original": 0,
+        "latitud_original": 0,
+        "tipo_no_resuelto": 0,
+        "departamento_inconsistente": 0,
+        "metadatos_incompletos": 0,
+        "departamento_nombre_inconsistente": 0,
+        "estado_catalogo": 0,
+        "estado_longitud": 0,
+        "estado_latitud": 0,
+        "coordenadas_utilizables": 0
+      },
+      "estados": {
+        "estado_catalogo": {
+          "disponible": 1122
+        }
+      },
+      "criticas_en_fuente": {},
+      "controles_adicionales": {
+        "tipo_no_resuelto": 0,
+        "departamento_inconsistente": 0,
+        "metadatos_incompletos": 0,
+        "departamento_nombre_inconsistente": 0,
+        "coordenadas_utilizables": 1122
+      },
+      "reporte_transformacion": {
+        "filas_entrada": 1122,
+        "filas_salida": 1122,
+        "claves_duplicadas": 0,
+        "columnas_renombradas": {
+          "Código Departamento": "codigo_departamento",
+          "Nombre Departamento": "departamento",
+          "Código Municipio": "codigo_municipio",
+          "Nombre Municipio": "municipio",
+          "Tipo: Municipio / Isla / Área no municipalizada": "tipo_territorio",
+          "longitud": "longitud",
+          "Latitud": "latitud"
+        },
+        "origen_csv": {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\bronze\\DIVIPOLA-_C_digos_municipios.csv",
+          "codificacion": "utf-8-sig",
+          "separador": ",",
+          "fecha_actualizacion_fuente": null,
+          "fecha_descarga": null,
+          "vigencia_historica_verificada": false
+        },
+        "departamentos_distintos": 33,
+        "departamentos_inconsistentes": 0,
+        "metadatos_incompletos": 0,
+        "filas_con_nombre_departamental_inconsistente": 0,
+        "tipos_territorio": {
+          "municipio": 1103,
+          "area_no_municipalizada": 18,
+          "isla": 1
+        },
+        "tipos_no_resueltos": 0,
+        "estados_catalogo": {
+          "disponible": 1122
+        },
+        "campos_coordenadas_presentes": [
+          "longitud",
+          "latitud"
+        ],
+        "filas_con_coordenadas_utilizables": 1122,
+        "estados_coordenadas": {
+          "longitud": {
+            "disponible": 1122
+          },
+          "latitud": {
+            "disponible": 1122
+          }
+        },
+        "rangos_coordenadas": {
+          "longitud": {
+            "min": -81.707181,
+            "max": -66.963692
+          },
+          "latitud": {
+            "min": -4.19895,
+            "max": 13.373185
+          }
+        },
+        "columnas_nuevas_no_tipificadas": [],
+        "faltantes_campos_territoriales": {
+          "codigo_municipio": 0,
+          "codigo_departamento": 0,
+          "municipio": 0,
+          "departamento": 0
+        },
+        "vigencia_historica_verificada": false
+      }
+    }
+  },
+  "aceptacion_panel": {
+    "estado": "no_evaluada",
+    "motivo": "La integracion y homologacion temporal del panel se implementaran en el punto 5.",
+    "denominador_requerido": "full_education_territorial_universe",
+    "filas_universo_educativo": 7850,
+    "variables_criticas": [
+      "poblacion_total",
+      "poblacion_centros_rural",
+      "accesos_t4",
+      "cobertura_neta",
+      "desercion",
+      "reprobacion"
+    ],
+    "umbrales_pct": {
+      "homologacion": 95,
+      "completitud_variable": 95,
+      "completitud_conjunta": 95
+    },
+    "homologacion_panel": null,
+    "completitud_seis_variables": null,
+    "completitud_conjunta": null,
+    "coincidencia_internet_t4": null
+  }
+}
