@@ -58,3 +58,20 @@ La conciliación con el CSV completo y las decisiones sobre el segmento `117`, l
 La ejecución completa con los originales, las cuatro salidas y la interpretación de los porcentajes se documentan en `docs/etapa_silver.md`. La aprobación de las pruebas verifica comportamientos del código; los casos semánticos pendientes se mantienen.
 
 La verificación final aprobó 216 pruebas conjuntas: 51 de Silver y 165 de las fuentes. La ejecución real también generó y reabrió correctamente los cuatro Parquet, y comprobó la integridad de los originales y de los archivos publicados.
+
+## Integración del panel
+
+```powershell
+# Comprobar fuentes, Silver e integración sin procesar los originales reales.
+.\venv\Scripts\python.exe -m pytest tests -q
+```
+
+`test_integration.py` añade 45 casos de conservación del universo y orden MEN, cardinalidad, llaves, tipos, datos originales, faltantes, ceros, extras, departamentos y diagnóstico de las seis variables. Incluye el lector de los cuatro Parquet con su metadata, detección de cambios de contenido y el modo `--integrar`. Distingue coincidencia actual de homologación temporal, y departamento desconocido de contradicción.
+
+`test_export_integration.py` añade 23 casos de publicación, hashes, tipos y recuperación. Simula fallos de preparación y de reemplazo con y sin versiones previas, y protege rutas Bronze, Silver, evidencias anteriores y nombres reservados para indicadores.
+
+`test_integration_metadata.py` añade 13 casos de procedencia y modificaciones durante la integración. Verifica los cuatro Silver, los dos JSON, configuración y código; comprueba que el coordinador detenga la publicación ante un cambio y que la etapa no necesite releer Bronze.
+
+La comprobación conjunta actual aprobó **297 pruebas**: 216 anteriores y 81 de integración, exportación y trazabilidad. La ejecución real guardó y reabrió el panel de 7.850 × 161, y los cuatro Silver y sus dos JSON conservaron sus hashes. Los resultados y la aceptación `no_cumple` se explican en [la etapa de integración](../docs/etapa_integracion.md).
+
+La aprobación de pruebas verifica el funcionamiento del programa. La acreditación territorial, la revisión semántica y el cumplimiento de las metas de datos siguen siendo controles distintos.

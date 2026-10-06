@@ -1,0 +1,556 @@
+{
+    "capturado_en_utc":  "2026-10-06T15:09:52.2332808Z",
+    "referencia_servicio":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer",
+    "referencia_capa":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1",
+    "servicio":  {
+                     "currentVersion":  11.3,
+                     "cimVersion":  "3.3.0",
+                     "serviceDescription":  "El servicio geográfico representa los departamentos, Municipios y Areas no Municipalizadas para el año 2018",
+                     "mapName":  "Layers",
+                     "description":  "",
+                     "copyrightText":  "Departamento Administrativo Nacional de Estadística (DANE)",
+                     "supportsDynamicLayers":  true,
+                     "layers":  [
+                                    {
+                                        "id":  0,
+                                        "name":  "Departamentos",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  0,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  1,
+                                        "name":  "Municipios",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  0,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  2,
+                                        "name":  "Áreas no municipalizadas",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  0,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    }
+                                ],
+                     "tables":  [
+
+                                ],
+                     "spatialReference":  {
+                                              "wkid":  102100,
+                                              "latestWkid":  3857,
+                                              "xyTolerance":  0.001,
+                                              "zTolerance":  0.001,
+                                              "mTolerance":  0.001,
+                                              "falseX":  -20037700,
+                                              "falseY":  -30241100,
+                                              "xyUnits":  148923141.92838538,
+                                              "falseZ":  -100000,
+                                              "zUnits":  10000,
+                                              "falseM":  -100000,
+                                              "mUnits":  10000
+                                          },
+                     "singleFusedMapCache":  true,
+                     "tileInfo":  {
+                                      "rows":  256,
+                                      "cols":  256,
+                                      "dpi":  96,
+                                      "format":  "PNG",
+                                      "compressionQuality":  0,
+                                      "origin":  {
+                                                     "x":  -20037508.342787,
+                                                     "y":  20037508.342787
+                                                 },
+                                      "spatialReference":  {
+                                                               "wkid":  102100,
+                                                               "latestWkid":  3857,
+                                                               "xyTolerance":  0.001,
+                                                               "zTolerance":  0.001,
+                                                               "mTolerance":  0.001,
+                                                               "falseX":  -20037700,
+                                                               "falseY":  -30241100,
+                                                               "xyUnits":  148923141.92838538,
+                                                               "falseZ":  -100000,
+                                                               "zUnits":  10000,
+                                                               "falseM":  -100000,
+                                                               "mUnits":  10000
+                                                           },
+                                      "lods":  [
+                                                   {
+                                                       "level":  0,
+                                                       "resolution":  156543.03392800014,
+                                                       "scale":  591657527.591555
+                                                   },
+                                                   {
+                                                       "level":  1,
+                                                       "resolution":  78271.51696399994,
+                                                       "scale":  295828763.795777
+                                                   },
+                                                   {
+                                                       "level":  2,
+                                                       "resolution":  39135.75848200009,
+                                                       "scale":  147914381.897889
+                                                   },
+                                                   {
+                                                       "level":  3,
+                                                       "resolution":  19567.87924099992,
+                                                       "scale":  73957190.948944
+                                                   },
+                                                   {
+                                                       "level":  4,
+                                                       "resolution":  9783.93962049996,
+                                                       "scale":  36978595.474472
+                                                   },
+                                                   {
+                                                       "level":  5,
+                                                       "resolution":  4891.96981024998,
+                                                       "scale":  18489297.737236
+                                                   },
+                                                   {
+                                                       "level":  6,
+                                                       "resolution":  2445.98490512499,
+                                                       "scale":  9244648.868618
+                                                   },
+                                                   {
+                                                       "level":  7,
+                                                       "resolution":  1222.992452562495,
+                                                       "scale":  4622324.434309
+                                                   },
+                                                   {
+                                                       "level":  8,
+                                                       "resolution":  611.4962262813797,
+                                                       "scale":  2311162.217155
+                                                   },
+                                                   {
+                                                       "level":  9,
+                                                       "resolution":  305.74811314055756,
+                                                       "scale":  1155581.108577
+                                                   },
+                                                   {
+                                                       "level":  10,
+                                                       "resolution":  152.87405657041106,
+                                                       "scale":  577790.554289
+                                                   },
+                                                   {
+                                                       "level":  11,
+                                                       "resolution":  76.43702828507324,
+                                                       "scale":  288895.277144
+                                                   },
+                                                   {
+                                                       "level":  12,
+                                                       "resolution":  38.21851414253662,
+                                                       "scale":  144447.638572
+                                                   },
+                                                   {
+                                                       "level":  13,
+                                                       "resolution":  19.10925707126831,
+                                                       "scale":  72223.819286
+                                                   },
+                                                   {
+                                                       "level":  14,
+                                                       "resolution":  9.554628535634155,
+                                                       "scale":  36111.909643
+                                                   },
+                                                   {
+                                                       "level":  15,
+                                                       "resolution":  4.77731426794937,
+                                                       "scale":  18055.954822
+                                                   },
+                                                   {
+                                                       "level":  16,
+                                                       "resolution":  2.388657133974685,
+                                                       "scale":  9027.977411
+                                                   },
+                                                   {
+                                                       "level":  17,
+                                                       "resolution":  1.1943285668550503,
+                                                       "scale":  4513.988705
+                                                   },
+                                                   {
+                                                       "level":  18,
+                                                       "resolution":  0.5971642835598172,
+                                                       "scale":  2256.994353
+                                                   },
+                                                   {
+                                                       "level":  19,
+                                                       "resolution":  0.29858214164761665,
+                                                       "scale":  1128.497176
+                                                   }
+                                               ]
+                                  },
+                     "storageInfo":  {
+                                         "storageFormat":  "esriMapCacheStorageModeCompactV2",
+                                         "packetSize":  128
+                                     },
+                     "initialExtent":  {
+                                           "xmin":  -9570266.535033464,
+                                           "ymin":  40632.326770949876,
+                                           "xmax":  -6417391.992327352,
+                                           "ymax":  967660.605813321,
+                                           "spatialReference":  {
+                                                                    "cs":  "pcs",
+                                                                    "wkid":  102100
+                                                                }
+                                       },
+                     "fullExtent":  {
+                                        "xmin":  -9098767.66,
+                                        "ymin":  -471243.5331999995,
+                                        "xmax":  -7441397.9823,
+                                        "ymax":  1504865.250500001,
+                                        "spatialReference":  {
+                                                                 "cs":  "pcs",
+                                                                 "wkid":  102100
+                                                             }
+                                    },
+                     "datesInUnknownTimezone":  false,
+                     "minScale":  18489297.737236,
+                     "maxScale":  72223.819286,
+                     "minLOD":  5,
+                     "maxLOD":  13,
+                     "units":  "esriMeters",
+                     "supportedImageFormatTypes":  "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+                     "documentInfo":  {
+                                          "Title":  "Departamentos, Municipios y Areas no Municipalizadas para el año 2018",
+                                          "Author":  "DANE",
+                                          "Comments":  "El servicio geográfico representa los departamentos, Municipios y Areas no Municipalizadas para el año 2018",
+                                          "Subject":  "Departamentos, Municipios y Areas no Municipalizadas para el año 2018",
+                                          "Category":  "",
+                                          "Version":  "10.1",
+                                          "AntialiasingMode":  "None",
+                                          "TextAntialiasingMode":  "Force",
+                                          "Keywords":  "CNPV,Censo,2018,municipios,departamentos,ANM"
+                                      },
+                     "supportsQueryDomains":  true,
+                     "capabilities":  "Map,Query,Data",
+                     "supportedQueryFormats":  "JSON, geoJSON, PBF",
+                     "exportTilesAllowed":  false,
+                     "referenceScale":  0.0,
+                     "supportsDatumTransformation":  true,
+                     "archivingInfo":  {
+                                           "supportsHistoricMoment":  false
+                                       },
+                     "supportsClipping":  true,
+                     "supportsSpatialFilter":  true,
+                     "supportsTimeRelation":  true,
+                     "supportsQueryDataElements":  true,
+                     "mapUnits":  {
+                                      "uwkid":  9001
+                                  },
+                     "maxRecordCount":  1000,
+                     "maxImageHeight":  4096,
+                     "maxImageWidth":  4096,
+                     "supportedExtensions":  "WFSServer, WMSServer",
+                     "resampling":  false,
+                     "serviceItemId":  "c3f1ca1c2cfc492aa9b83678514e07f8"
+                 },
+    "capa":  {
+                 "currentVersion":  11.3,
+                 "cimVersion":  "3.3.0",
+                 "id":  1,
+                 "name":  "Municipios",
+                 "type":  "Feature Layer",
+                 "description":  "",
+                 "geometryType":  "esriGeometryPolygon",
+                 "sourceSpatialReference":  {
+                                                "wkid":  102100,
+                                                "latestWkid":  3857,
+                                                "xyTolerance":  0.001,
+                                                "zTolerance":  0.001,
+                                                "mTolerance":  0.001,
+                                                "falseX":  -20037700,
+                                                "falseY":  -30241100,
+                                                "xyUnits":  10000,
+                                                "falseZ":  -100000,
+                                                "zUnits":  10000,
+                                                "falseM":  -100000,
+                                                "mUnits":  10000
+                                            },
+                 "copyrightText":  "",
+                 "parentLayer":  null,
+                 "subLayers":  [
+
+                               ],
+                 "minScale":  0,
+                 "maxScale":  0,
+                 "referenceScale":  0.0,
+                 "drawingInfo":  {
+                                     "renderer":  {
+                                                      "type":  "simple",
+                                                      "symbol":  {
+                                                                     "type":  "esriSFS",
+                                                                     "style":  "esriSFSSolid",
+                                                                     "color":  [
+                                                                                   0,
+                                                                                   0,
+                                                                                   0,
+                                                                                   0
+                                                                               ],
+                                                                     "outline":  {
+                                                                                     "type":  "esriSLS",
+                                                                                     "style":  "esriSLSSolid",
+                                                                                     "color":  [
+                                                                                                   225,
+                                                                                                   225,
+                                                                                                   225,
+                                                                                                   255
+                                                                                               ],
+                                                                                     "width":  0.4
+                                                                                 }
+                                                                 }
+                                                  },
+                                     "scaleSymbols":  true,
+                                     "transparency":  0,
+                                     "labelingInfo":  [
+                                                          {
+                                                              "labelExpression":  "[MPIO_CNMBR]",
+                                                              "labelPlacement":  "esriServerPolygonPlacementAlwaysHorizontal",
+                                                              "removeDuplicates":  "none",
+                                                              "multiPart":  "labelPerPart",
+                                                              "deconflictionStrategy":  "static",
+                                                              "repeatLabel":  false,
+                                                              "allowOverrun":  true,
+                                                              "stackLabel":  false,
+                                                              "useCodedValues":  true,
+                                                              "maxScale":  0,
+                                                              "minScale":  577790.554289,
+                                                              "name":  "Default",
+                                                              "priority":  2,
+                                                              "symbol":  {
+                                                                             "type":  "esriTS",
+                                                                             "color":  [
+                                                                                           178,
+                                                                                           178,
+                                                                                           178,
+                                                                                           255
+                                                                                       ],
+                                                                             "backgroundColor":  null,
+                                                                             "borderLineColor":  null,
+                                                                             "borderLineSize":  null,
+                                                                             "verticalAlignment":  "bottom",
+                                                                             "horizontalAlignment":  "center",
+                                                                             "rightToLeft":  false,
+                                                                             "angle":  0,
+                                                                             "xoffset":  0,
+                                                                             "yoffset":  0,
+                                                                             "kerning":  true,
+                                                                             "haloColor":  null,
+                                                                             "haloSize":  null,
+                                                                             "font":  {
+                                                                                          "family":  "Arial",
+                                                                                          "size":  6.5,
+                                                                                          "style":  "normal",
+                                                                                          "weight":  "bold",
+                                                                                          "decoration":  "none"
+                                                                                      }
+                                                                         }
+                                                          }
+                                                      ]
+                                 },
+                 "defaultVisibility":  true,
+                 "extent":  {
+                                "xmin":  -9098767.66,
+                                "ymin":  -471243.5331999995,
+                                "xmax":  -7441397.9823,
+                                "ymax":  1504865.250500001,
+                                "spatialReference":  {
+                                                         "wkid":  102100,
+                                                         "latestWkid":  3857,
+                                                         "xyTolerance":  0.001,
+                                                         "zTolerance":  0.001,
+                                                         "mTolerance":  0.001,
+                                                         "falseX":  -20037700,
+                                                         "falseY":  -30241100,
+                                                         "xyUnits":  148923141.92838538,
+                                                         "falseZ":  -100000,
+                                                         "zUnits":  10000,
+                                                         "falseM":  -100000,
+                                                         "mUnits":  10000
+                                                     }
+                            },
+                 "hasAttachments":  false,
+                 "htmlPopupType":  "esriServerHTMLPopupTypeAsHTMLText",
+                 "displayField":  "DPTO_CCDGO",
+                 "typeIdField":  null,
+                 "subtypeFieldName":  null,
+                 "subtypeField":  null,
+                 "defaultSubtypeCode":  null,
+                 "fields":  [
+                                {
+                                    "name":  "OBJECTID_1",
+                                    "type":  "esriFieldTypeOID",
+                                    "alias":  "FID",
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "DPTO_CCDGO",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Código de departamento",
+                                    "length":  2,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CCDGO",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Código de municipio",
+                                    "length":  5,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CNMBR",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Nombre",
+                                    "length":  60,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "Shape",
+                                    "type":  "esriFieldTypeGeometry",
+                                    "alias":  "Shape",
+                                    "domain":  null
+                                }
+                            ],
+                 "geometryField":  {
+                                       "name":  "Shape",
+                                       "type":  "esriFieldTypeGeometry",
+                                       "alias":  "Shape"
+                                   },
+                 "indexes":  [
+                                 {
+                                     "name":  "FDO_OBJECTID_1",
+                                     "fields":  "OBJECTID_1",
+                                     "isAscending":  true,
+                                     "isUnique":  true,
+                                     "description":  ""
+                                 },
+                                 {
+                                     "name":  "FDO_Shape",
+                                     "fields":  "Shape",
+                                     "isAscending":  true,
+                                     "isUnique":  false,
+                                     "description":  ""
+                                 }
+                             ],
+                 "subtypes":  [
+
+                              ],
+                 "relationships":  [
+
+                                   ],
+                 "canModifyLayer":  true,
+                 "canScaleSymbols":  false,
+                 "hasLabels":  true,
+                 "capabilities":  "Map,Query,Data",
+                 "maxRecordCount":  1000,
+                 "supportsStatistics":  true,
+                 "supportsExceedsLimitStatistics":  true,
+                 "supportsAdvancedQueries":  true,
+                 "supportedQueryFormats":  "JSON, geoJSON, PBF",
+                 "isDataVersioned":  false,
+                 "ownershipBasedAccessControlForFeatures":  {
+                                                                "allowOthersToQuery":  true
+                                                            },
+                 "useStandardizedQueries":  true,
+                 "supportedSpatialRelationships":  [
+                                                       "esriSpatialRelIntersects",
+                                                       "esriSpatialRelContains",
+                                                       "esriSpatialRelCrosses",
+                                                       "esriSpatialRelEnvelopeIntersects",
+                                                       "esriSpatialRelIndexIntersects",
+                                                       "esriSpatialRelOverlaps",
+                                                       "esriSpatialRelTouches",
+                                                       "esriSpatialRelWithin",
+                                                       "esriSpatialRelRelation"
+                                                   ],
+                 "advancedQueryCapabilities":  {
+                                                   "useStandardizedQueries":  true,
+                                                   "supportsStatistics":  true,
+                                                   "supportsPercentileStatistics":  true,
+                                                   "supportsHavingClause":  true,
+                                                   "supportsOrderBy":  true,
+                                                   "supportsDistinct":  true,
+                                                   "supportsCountDistinct":  true,
+                                                   "supportsAdvancedQueryRelated":  true,
+                                                   "supportsQueryRelatedPagination":  true,
+                                                   "supportsPagination":  true,
+                                                   "supportsLod":  false,
+                                                   "supportsQueryWithLodSR":  false,
+                                                   "supportsTrueCurve":  true,
+                                                   "supportsQueryWithDatumTransformation":  true,
+                                                   "supportsReturningQueryExtent":  true,
+                                                   "supportsQueryWithDistance":  true,
+                                                   "supportsSqlExpression":  true,
+                                                   "supportsTimeRelation":  true,
+                                                   "supportsSqlFormat":  false,
+                                                   "supportsQueryAnalytic":  false,
+                                                   "supportsCurrentUserQueries":  true
+                                               },
+                 "supportsDatumTransformation":  true,
+                 "dateFieldsTimeReference":  null,
+                 "preferredTimeReference":  null,
+                 "datesInUnknownTimezone":  false,
+                 "hasGeometryProperties":  true,
+                 "geometryProperties":  {
+                                            "shapeAreaFieldName":  "Shape_Area",
+                                            "shapeLengthFieldName":  "Shape_Length",
+                                            "units":  "esriMeters",
+                                            "mapUnits":  {
+                                                             "uwkid":  9001
+                                                         }
+                                        },
+                 "hasMetadata":  false,
+                 "isDataArchived":  false,
+                 "archivingInfo":  {
+                                       "supportsQueryWithHistoricMoment":  false,
+                                       "startArchivingMoment":  -1
+                                   },
+                 "supportsCoordinatesQuantization":  true,
+                 "supportsDynamicLegends":  true,
+                 "serviceItemId":  "c3f1ca1c2cfc492aa9b83678514e07f8"
+             },
+    "verificacion_descarga":  {
+                                  "conteo_oficial":  1122,
+                                  "cantidad_ids":  1122,
+                                  "cantidad_features":  1122,
+                                  "ids_unicos":  true,
+                                  "ids_coincidentes":  true,
+                                  "consulta_completa":  true,
+                                  "filtro_aplicado":  null,
+                                  "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                  "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                  "paginas":  [
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  500,
+                                                      "cantidad_features":  500,
+                                                      "exceededTransferLimit":  false
+                                                  },
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  500,
+                                                      "cantidad_features":  500,
+                                                      "exceededTransferLimit":  false
+                                                  },
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  122,
+                                                      "cantidad_features":  122,
+                                                      "exceededTransferLimit":  false
+                                                  }
+                                              ]
+                              }
+}

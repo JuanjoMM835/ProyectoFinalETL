@@ -1,11 +1,11 @@
 {
-  "ejecucion_id": "457c17ca-dbde-40c5-b70d-eaee1dfd3a08",
+  "ejecucion_id": "0b145b5b-7a98-4c59-850d-10baf95065df",
   "etapa": "silver",
   "estado": "exploratorio",
-  "inicio_utc": "2026-10-06T05:25:09.205459+00:00",
-  "fin_preparacion_utc": "2026-10-06T05:29:30.774592+00:00",
+  "inicio_utc": "2026-10-06T14:45:39.770474+00:00",
+  "fin_preparacion_utc": "2026-10-06T14:46:45.467391+00:00",
   "version_proyecto": "1.0.0",
-  "version_contrato": "1.0",
+  "version_contrato": "1.1",
   "periodo": {
     "inicio": 2018,
     "fin": 2024
@@ -48,15 +48,15 @@
   "bronze_verificado_sin_cambios": true,
   "configuracion": {
     "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\config\\config.yaml",
-    "sha256": "8d4b8e23aa6cb5c2776dc61403b54b1f6dd15976389b7f39061534507cd10252"
+    "sha256": "f415a25ec8b1d196a31caef613e99bf5c496ff91f164695b59e8c74453e7d51f"
   },
   "codigo": {
-    "commit_git": "1c6a1a04a9e33f9b213b6141847bb59db66b4a51",
+    "commit_git": "e607fbb95d360f552edef7e2c2fb653a026da43a",
     "cambios_locales": true,
     "archivos": [
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\main.py",
-        "sha256": "c2ef8e14b6cd6f183d14cfdd95ad4c30f9b284c210f930fec30eecfbcba20a13"
+        "sha256": "42d00de4bf58ee5ba55e019b4ad25dfe8c23e808dbf7843ad60700bd12badb30"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\__init__.py",
@@ -83,12 +83,28 @@
         "sha256": "8521d4cff1403efbcd9201a2a634b53b0237bd80fd9e09aaec43189b72c7af65"
       },
       {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\read_integrated.py",
+        "sha256": "fa11c56d1568394773de49e7a8814e68ae14caf28d6743c5972998b11230bc65"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\read_silver.py",
+        "sha256": "eac0c83a6cea368525c52f17db68ab5900ec9ad972b1aa998c6f2d19ee90a422"
+      },
+      {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\__init__.py",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\execution_metadata.py",
-        "sha256": "2da80633280e27e04522ea2b30a5a6f40908f119f60693df3c40581e80950da6"
+        "sha256": "e6adef09df55a872f217193079136e0809e36c6859b3e2a0db62717c9e3d0fb3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_gold.py",
+        "sha256": "62562ced44bd5fe6fd20c6a9f8e6561f47f128d2a326db57efdec8abc8730af3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_integration.py",
+        "sha256": "6ed7c47207321e18eaa6eb6bc73fce61ba22317a1131e96b108c1e74d857c68d"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_results.py",
@@ -100,7 +116,7 @@
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\build_indicators.py",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "sha256": "bca6142d069933be04610704ea0b28d621206ad8a33299f7b871d490249ae35f"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_divipola.py",
@@ -108,7 +124,7 @@
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_education.py",
-        "sha256": "3ca70269c751cf761a36d580d4f804dc07c3a14875c6b5923728d4b860ce308b"
+        "sha256": "2d8a86c433d1a884eff0e9f247e06c5539d964248a5ea71c2154c684c91f3457"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_internet.py",
@@ -120,21 +136,29 @@
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\integrate_sources.py",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "sha256": "e0e344681f5083d346ca3dd343cfa7fcf4543a0f105ee1db0cd4e562884e7527"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\quality_integration.py",
+        "sha256": "813150305550c8cc43fce2e078b4a96f578de27d635bb5e6f88068b37730c7ac"
       },
       {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\quality_silver.py",
         "sha256": "9b94d7edfa304ca26e405d3f0b51e20abd2d31afbe56f3ae66c84f2a433b97a3"
       },
       {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\resolve_territory.py",
+        "sha256": "b9c0e4328c3d05cfbb9b0dfa63972594d02d3531f590fbe0798e8cfecf682253"
+      },
+      {
         "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\docs\\contrato_datos.md",
-        "sha256": "6d67a59ebf5de7339ddd3f6a9fdc533153ba5e401a9bec018c09187d0bb260b2"
+        "sha256": "71ac06f2a689a260c0d4f302314884c3ab3584f966ce895245e7cffa5a089657"
       }
     ]
   },
   "entorno": {
-    "python": "3.8.10",
-    "pandas": "2.0.3",
+    "python": "3.12.14",
+    "pandas": "3.0.1",
     "pyarrow": "17.0.0",
     "pyyaml": "6.0.3"
   },
@@ -356,16 +380,20 @@
           "tipo": "string"
         },
         {
-          "nombre": "departamento_inconsistente",
+          "nombre": "cobertura_neta_superior_100_informativo",
           "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
         },
         {
           "nombre": "estado_homologacion",
           "tipo": "string"
         }
       ],
-      "tamano_bytes": 956258,
-      "sha256": "7aec03b571e8f9a70e6e7dc33459024110ad7b3800bf1c1111bdc9c7054ba5aa"
+      "tamano_bytes": 956862,
+      "sha256": "8548e0f2e17ed93cbabac723c728714262672d7915bfe2a2b9a6ce21d2c903cc"
     },
     "poblacion": {
       "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\poblacion_limpia.parquet",
@@ -453,7 +481,7 @@
         },
         {
           "nombre": "departamento_inconsistente",
-          "tipo": "boolean"
+          "tipo": "bool[pyarrow]"
         },
         {
           "nombre": "metadatos_incompletos",
@@ -480,8 +508,8 @@
           "tipo": "string"
         }
       ],
-      "tamano_bytes": 502430,
-      "sha256": "c70835eb7969da55c34da2039c511f4fe854494f371cb451ef0b925f4c2292e4"
+      "tamano_bytes": 502413,
+      "sha256": "1444f78e7799f81b454b5152d332ca3645e980f9179f42c9299a5f2b4a0a6b9b"
     },
     "internet": {
       "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\internet_municipio_anio.parquet",
@@ -588,8 +616,8 @@
           "tipo": "string"
         }
       ],
-      "tamano_bytes": 269420,
-      "sha256": "653dfdaa405604f080d3c5fabb4037eec887481f8acb6b90d22f59740d34036c"
+      "tamano_bytes": 269396,
+      "sha256": "7b8eef3f94632fcd677887d5bf8f79683586cf3bf3126bad81185ad64aa72ce1"
     },
     "divipola": {
       "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\silver\\divipola_limpia.parquet",
@@ -657,11 +685,11 @@
         },
         {
           "nombre": "tipo_no_resuelto",
-          "tipo": "boolean"
+          "tipo": "bool[pyarrow]"
         },
         {
           "nombre": "departamento_inconsistente",
-          "tipo": "boolean"
+          "tipo": "bool[pyarrow]"
         },
         {
           "nombre": "metadatos_incompletos",
@@ -685,20 +713,20 @@
         },
         {
           "nombre": "coordenadas_utilizables",
-          "tipo": "boolean"
+          "tipo": "bool[pyarrow]"
         }
       ],
-      "tamano_bytes": 102450,
-      "sha256": "785f298c685fad79eb6433ec5f0bffd09d8cad713bbb6aca0250444a13d1b919"
+      "tamano_bytes": 103347,
+      "sha256": "756451da3f9b2ce482d8ae735464f179c15260ed3d67ac24426823ffe30f2f1f"
     }
   },
   "reporte_calidad": {
     "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\reporte_calidad.json",
-    "tamano_bytes": 53513,
-    "sha256": "166b4d6a3517af99fd40f847a0c0117c0146330c6a4a6a03e70770e9ccc173a5"
+    "tamano_bytes": 54010,
+    "sha256": "c75d7b2adce55690bec5d92a1a60f309d9e55ff5cc5c6cdddb7714515e51af42"
   },
   "metadata_ejecucion": {
     "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\metadata_ejecucion.json"
   },
-  "fin_exportacion_utc": "2026-10-06T05:29:34.208985Z"
+  "fin_exportacion_utc": "2026-10-06T14:46:45.780483Z"
 }

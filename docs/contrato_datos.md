@@ -1,8 +1,8 @@
 # Contrato de datos del proyecto ETL
 
 - **Proyecto:** ProyectoFinalETL.
-- **Versión del contrato:** 1.0.
-- **Fecha:** 2026-10-05.
+- **Versión del contrato:** 1.1.
+- **Fecha:** 2026-10-06.
 - **Estado:** propuestas aceptadas para la primera versión del ETL.
 - **Alcance de este documento:** definir datos, transformaciones, validaciones y entregables antes de implementar el pipeline. La existencia de este contrato no implica que Silver, Gold o el ETL estén implementados.
 
@@ -131,6 +131,7 @@ Silver puede conservar más campos que este núcleo, incluidos indicadores educa
 - Separar el nivel nacional y seleccionar 2018–2024.
 - Conservar la escala porcentual del MEN: `5.2` representa 5,2 %, no una proporción de 0,052.
 - Revisar valores extremos sin borrarlos ni limitarlos automáticamente. Una cobertura bruta superior a 100 puede ser conceptualmente válida; no se usará un límite universal de 100 para todos los indicadores.
+- La [ficha oficial MEN de cobertura neta, serie 2015–2024](https://portalsineb.mineducacion.gov.co/1782/articles-412165_Cobertura_02_V2024.pdf) también admite valores de cobertura neta superiores a 100 por proyecciones poblacionales, migración y movilidad estudiantil entre municipios. Superar 100 no impide por sí solo el uso local: conservar el valor y una marca informativa. Esto no certifica cada observación ni modifica las restricciones de deserción y reprobación.
 - La columna `SEDES_CONECTADAS_A_INTERNET` carece de datos en todo el periodo revisado. Se conservará su limitación y no se imputará cero ni se ofrecerá como indicador calculable con esta fuente.
 
 ### 6.3 Población
@@ -354,5 +355,6 @@ Documentar estas verificaciones pendientes no impide implementar el núcleo inic
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0 | 2026-10-05 | Primera documentación de las propuestas aceptadas: universo MEN territorial, periodo 2018–2024, llave, T4, capas, diccionario, excepciones, calidad y salidas. |
+| 1.1 | 2026-10-06 | Revisión de elegibilidad de cobertura neta con ficha oficial MEN: >100 pasa a marca informativa, sin recorte ni invalidación automática. Indicadores y diagnósticos diferenciados; la acreditación territorial sigue exigiendo evidencia por código y año. Universo, periodo, llaves, T4 y umbrales se conservan. |
 
 Los cambios de universo, periodo, llaves, unidades, elegibilidad, referencia temporal o metodología de indicadores deben registrarse en una nueva versión y reflejarse en configuración y metadatos de ejecución.

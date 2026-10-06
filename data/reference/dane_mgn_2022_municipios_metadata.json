@@ -1,0 +1,548 @@
+{
+    "capturado_en_utc":  "2026-10-06T15:10:09.0997821Z",
+    "referencia_servicio":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer",
+    "referencia_capa":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317",
+    "servicio":  {
+                     "currentVersion":  11.3,
+                     "cimVersion":  "3.3.0",
+                     "serviceDescription":  "",
+                     "mapName":  "Serv_CapasMGN_2022",
+                     "description":  "",
+                     "copyrightText":  "",
+                     "supportsDynamicLayers":  true,
+                     "layers":  [
+                                    {
+                                        "id":  319,
+                                        "name":  "Departamento",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  0,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  317,
+                                        "name":  "Municipio",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  3000000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  305,
+                                        "name":  "Zona Urbana",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  1500000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  324,
+                                        "name":  "Clase",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  750000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  286,
+                                        "name":  "Sector Rural",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  400000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  287,
+                                        "name":  "Sección Rural",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  300000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  246,
+                                        "name":  "Sector Urbano",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  100000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  214,
+                                        "name":  "Sección Urbana",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  50000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    },
+                                    {
+                                        "id":  215,
+                                        "name":  "Manzana",
+                                        "parentLayerId":  -1,
+                                        "defaultVisibility":  true,
+                                        "subLayerIds":  null,
+                                        "minScale":  50000,
+                                        "maxScale":  0,
+                                        "type":  "Feature Layer",
+                                        "geometryType":  "esriGeometryPolygon",
+                                        "supportsDynamicLegends":  true
+                                    }
+                                ],
+                     "tables":  [
+
+                                ],
+                     "spatialReference":  {
+                                              "wkid":  102100,
+                                              "latestWkid":  3857,
+                                              "xyTolerance":  0.001,
+                                              "zTolerance":  0.001,
+                                              "mTolerance":  0.001,
+                                              "falseX":  -20037700,
+                                              "falseY":  -30241100,
+                                              "xyUnits":  10000,
+                                              "falseZ":  -100000,
+                                              "zUnits":  10000,
+                                              "falseM":  -100000,
+                                              "mUnits":  10000
+                                          },
+                     "singleFusedMapCache":  false,
+                     "initialExtent":  {
+                                           "xmin":  -8319769.925158787,
+                                           "ymin":  491985.63467182306,
+                                           "xmax":  -8227049.510159931,
+                                           "ymax":  574863.4210015687,
+                                           "spatialReference":  {
+                                                                    "wkid":  102100,
+                                                                    "latestWkid":  3857,
+                                                                    "xyTolerance":  0.001,
+                                                                    "zTolerance":  0.001,
+                                                                    "mTolerance":  0.001,
+                                                                    "falseX":  -20037700,
+                                                                    "falseY":  -30241100,
+                                                                    "xyUnits":  10000,
+                                                                    "falseZ":  -100000,
+                                                                    "zUnits":  10000,
+                                                                    "falseM":  -100000,
+                                                                    "mUnits":  10000
+                                                                }
+                                       },
+                     "fullExtent":  {
+                                        "xmin":  -9098767.659966145,
+                                        "ymin":  -471243.5331774072,
+                                        "xmax":  -7441397.982281902,
+                                        "ymax":  1504865.250436929,
+                                        "spatialReference":  {
+                                                                 "wkid":  102100,
+                                                                 "latestWkid":  3857,
+                                                                 "xyTolerance":  0.001,
+                                                                 "zTolerance":  0.001,
+                                                                 "mTolerance":  0.001,
+                                                                 "falseX":  -20037700,
+                                                                 "falseY":  -30241100,
+                                                                 "xyUnits":  10000,
+                                                                 "falseZ":  -100000,
+                                                                 "zUnits":  10000,
+                                                                 "falseM":  -100000,
+                                                                 "mUnits":  10000
+                                                             }
+                                    },
+                     "datesInUnknownTimezone":  false,
+                     "minScale":  0,
+                     "maxScale":  0,
+                     "units":  "esriMeters",
+                     "supportedImageFormatTypes":  "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+                     "documentInfo":  {
+                                          "Title":  "Serv_CapasMGN_2002",
+                                          "Author":  "",
+                                          "Comments":  "",
+                                          "Subject":  "",
+                                          "Category":  "",
+                                          "Version":  "3.3.0",
+                                          "AntialiasingMode":  "Fast",
+                                          "TextAntialiasingMode":  "Force",
+                                          "Keywords":  "marcos,geoestadisticos"
+                                      },
+                     "supportsQueryDomains":  true,
+                     "capabilities":  "Map,Query,Data",
+                     "supportedQueryFormats":  "JSON, geoJSON, PBF",
+                     "exportTilesAllowed":  false,
+                     "referenceScale":  0.0,
+                     "datumTransformations":  [
+                                                  {
+                                                      "geoTransforms":  [
+                                                                            {
+                                                                                "wkid":  15738,
+                                                                                "latestWkid":  15738,
+                                                                                "transformForward":  true,
+                                                                                "name":  "MAGNA_To_WGS_1984_1"
+                                                                            }
+                                                                        ]
+                                                  },
+                                                  {
+                                                      "geoTransforms":  [
+                                                                            {
+                                                                                "wkid":  15738,
+                                                                                "latestWkid":  15738,
+                                                                                "transformForward":  false,
+                                                                                "name":  "MAGNA_To_WGS_1984_1"
+                                                                            }
+                                                                        ]
+                                                  }
+                                              ],
+                     "supportsDatumTransformation":  true,
+                     "floorAwareMapProperties":  {
+                                                     "defaultFloorFilterSettings":  {
+                                                                                        "isEnabled":  false
+                                                                                    }
+                                                 },
+                     "archivingInfo":  {
+                                           "supportsHistoricMoment":  false
+                                       },
+                     "supportsClipping":  true,
+                     "supportsSpatialFilter":  true,
+                     "supportsTimeRelation":  true,
+                     "supportsQueryDataElements":  true,
+                     "mapUnits":  {
+                                      "uwkid":  9001
+                                  },
+                     "maxRecordCount":  2000,
+                     "maxImageHeight":  4096,
+                     "maxImageWidth":  4096,
+                     "supportedExtensions":  "OGCFeatureServer, WFSServer, WMSServer",
+                     "serviceItemId":  "894310831b384611bb9bdf423cee07e9"
+                 },
+    "capa":  {
+                 "currentVersion":  11.3,
+                 "cimVersion":  "3.3.0",
+                 "id":  317,
+                 "name":  "Municipio",
+                 "type":  "Feature Layer",
+                 "description":  "",
+                 "geometryType":  "esriGeometryPolygon",
+                 "sourceSpatialReference":  {
+                                                "wkid":  4686,
+                                                "latestWkid":  4686,
+                                                "xyTolerance":  8.98315284119521E-09,
+                                                "zTolerance":  0.001,
+                                                "mTolerance":  0.001,
+                                                "falseX":  -400,
+                                                "falseY":  -400,
+                                                "xyUnits":  999999999.99999988,
+                                                "falseZ":  0,
+                                                "zUnits":  1,
+                                                "falseM":  0,
+                                                "mUnits":  1
+                                            },
+                 "copyrightText":  "",
+                 "parentLayer":  null,
+                 "subLayers":  [
+
+                               ],
+                 "minScale":  3000000,
+                 "maxScale":  0,
+                 "referenceScale":  0.0,
+                 "drawingInfo":  {
+                                     "renderer":  {
+                                                      "type":  "simple",
+                                                      "symbol":  {
+                                                                     "type":  "esriSFS",
+                                                                     "style":  "esriSFSSolid",
+                                                                     "color":  [
+                                                                                   0,
+                                                                                   0,
+                                                                                   0,
+                                                                                   0
+                                                                               ],
+                                                                     "outline":  {
+                                                                                     "type":  "esriSLS",
+                                                                                     "style":  "esriSLSSolid",
+                                                                                     "color":  [
+                                                                                                   168,
+                                                                                                   56,
+                                                                                                   0,
+                                                                                                   255
+                                                                                               ],
+                                                                                     "width":  1.25
+                                                                                 }
+                                                                 }
+                                                  },
+                                     "scaleSymbols":  true,
+                                     "transparency":  0,
+                                     "labelingInfo":  null
+                                 },
+                 "defaultVisibility":  true,
+                 "extent":  {
+                                "xmin":  -9098767.659966145,
+                                "ymin":  -471243.5331774072,
+                                "xmax":  -7441397.982281902,
+                                "ymax":  1504865.250436929,
+                                "spatialReference":  {
+                                                         "wkid":  102100,
+                                                         "latestWkid":  3857,
+                                                         "xyTolerance":  0.001,
+                                                         "zTolerance":  0.001,
+                                                         "mTolerance":  0.001,
+                                                         "falseX":  -20037700,
+                                                         "falseY":  -30241100,
+                                                         "xyUnits":  10000,
+                                                         "falseZ":  -100000,
+                                                         "zUnits":  10000,
+                                                         "falseM":  -100000,
+                                                         "mUnits":  10000
+                                                     }
+                            },
+                 "hasAttachments":  false,
+                 "htmlPopupType":  "esriServerHTMLPopupTypeAsHTMLText",
+                 "displayField":  "dpto_ccdgo",
+                 "typeIdField":  null,
+                 "subtypeFieldName":  null,
+                 "subtypeField":  null,
+                 "defaultSubtypeCode":  null,
+                 "fields":  [
+                                {
+                                    "name":  "OBJECTID",
+                                    "type":  "esriFieldTypeOID",
+                                    "alias":  "OBJECTID",
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "DPTO_CCDGO",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Código DANE departamento",
+                                    "length":  2,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CCDGO",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Código DANE municipio",
+                                    "length":  3,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_NAREA",
+                                    "type":  "esriFieldTypeDouble",
+                                    "alias":  "Área departamento en kilómetros cuadrados",
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_NANO",
+                                    "type":  "esriFieldTypeSmallInteger",
+                                    "alias":  "Año versión DANE",
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CDPMP",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Codigo municipio concatenado",
+                                    "length":  5,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "DPTO_CNMBRE",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Nombre departamento",
+                                    "length":  250,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CNMBRE",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Nombre municipio",
+                                    "length":  250,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_CRSLCION",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Año documento creacion",
+                                    "length":  100,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "MPIO_TIPO",
+                                    "type":  "esriFieldTypeString",
+                                    "alias":  "Tipo Municipio",
+                                    "length":  50,
+                                    "domain":  null
+                                },
+                                {
+                                    "name":  "GLOBALID",
+                                    "type":  "esriFieldTypeGlobalID",
+                                    "alias":  "globalid",
+                                    "length":  38,
+                                    "domain":  null
+                                }
+                            ],
+                 "geometryField":  {
+
+                                   },
+                 "indexes":  [
+                                 {
+                                     "name":  "I59353DPTO_CCDGO",
+                                     "fields":  "DPTO_CCDGO",
+                                     "isAscending":  true,
+                                     "isUnique":  false,
+                                     "description":  ""
+                                 },
+                                 {
+                                     "name":  "I59353MPIO_CDPMP",
+                                     "fields":  "MPIO_CDPMP",
+                                     "isAscending":  true,
+                                     "isUnique":  false,
+                                     "description":  ""
+                                 },
+                                 {
+                                     "name":  "UUID_70725",
+                                     "fields":  "GLOBALID",
+                                     "isAscending":  true,
+                                     "isUnique":  true,
+                                     "description":  ""
+                                 }
+                             ],
+                 "subtypes":  [
+
+                              ],
+                 "relationships":  [
+
+                                   ],
+                 "canModifyLayer":  true,
+                 "canScaleSymbols":  false,
+                 "hasLabels":  true,
+                 "capabilities":  "Map,Query,Data",
+                 "maxRecordCount":  2000,
+                 "supportsStatistics":  true,
+                 "supportsExceedsLimitStatistics":  true,
+                 "supportsAdvancedQueries":  true,
+                 "supportedQueryFormats":  "JSON, geoJSON, PBF",
+                 "isDataVersioned":  false,
+                 "ownershipBasedAccessControlForFeatures":  {
+                                                                "allowOthersToQuery":  true
+                                                            },
+                 "useStandardizedQueries":  true,
+                 "supportedSpatialRelationships":  [
+                                                       "esriSpatialRelIntersects",
+                                                       "esriSpatialRelContains",
+                                                       "esriSpatialRelCrosses",
+                                                       "esriSpatialRelEnvelopeIntersects",
+                                                       "esriSpatialRelIndexIntersects",
+                                                       "esriSpatialRelOverlaps",
+                                                       "esriSpatialRelTouches",
+                                                       "esriSpatialRelWithin",
+                                                       "esriSpatialRelRelation"
+                                                   ],
+                 "advancedQueryCapabilities":  {
+                                                   "useStandardizedQueries":  true,
+                                                   "supportsStatistics":  true,
+                                                   "supportsPercentileStatistics":  true,
+                                                   "supportsHavingClause":  true,
+                                                   "supportsOrderBy":  true,
+                                                   "supportsDistinct":  true,
+                                                   "supportsCountDistinct":  true,
+                                                   "supportsAdvancedQueryRelated":  true,
+                                                   "supportsQueryRelatedPagination":  true,
+                                                   "supportsPagination":  false,
+                                                   "supportsLod":  false,
+                                                   "supportsQueryWithLodSR":  false,
+                                                   "supportsTrueCurve":  true,
+                                                   "supportsQueryWithDatumTransformation":  true,
+                                                   "supportsReturningQueryExtent":  true,
+                                                   "supportsQueryWithDistance":  true,
+                                                   "supportsSqlExpression":  true,
+                                                   "supportsTimeRelation":  true,
+                                                   "supportsSqlFormat":  false,
+                                                   "supportsQueryAnalytic":  true,
+                                                   "supportsCurrentUserQueries":  true
+                                               },
+                 "supportsDatumTransformation":  true,
+                 "advancedQueryAnalyticCapabilities":  {
+                                                           "supportsLinearRegression":  true,
+                                                           "supportsAsync":  false,
+                                                           "supportsPercentileAnalytic":  true
+                                                       },
+                 "dateFieldsTimeReference":  null,
+                 "preferredTimeReference":  null,
+                 "datesInUnknownTimezone":  false,
+                 "hasGeometryProperties":  true,
+                 "geometryProperties":  {
+                                            "shapeAreaFieldName":  "SHAPE.AREA",
+                                            "shapeLengthFieldName":  "SHAPE.LEN",
+                                            "units":  "esriDecimalDegrees",
+                                            "mapUnits":  {
+                                                             "uwkid":  9102
+                                                         }
+                                        },
+                 "hasMetadata":  true,
+                 "isDataArchived":  false,
+                 "archivingInfo":  {
+                                       "supportsQueryWithHistoricMoment":  false,
+                                       "startArchivingMoment":  -1
+                                   },
+                 "supportsCoordinatesQuantization":  true,
+                 "supportsDynamicLegends":  true,
+                 "serviceItemId":  "894310831b384611bb9bdf423cee07e9"
+             },
+    "verificacion_descarga":  {
+                                  "conteo_oficial":  1121,
+                                  "cantidad_ids":  1121,
+                                  "cantidad_features":  1121,
+                                  "ids_unicos":  true,
+                                  "ids_coincidentes":  true,
+                                  "consulta_completa":  true,
+                                  "filtro_aplicado":  null,
+                                  "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                  "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                  "paginas":  [
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  500,
+                                                      "cantidad_features":  500,
+                                                      "exceededTransferLimit":  false
+                                                  },
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  500,
+                                                      "cantidad_features":  500,
+                                                      "exceededTransferLimit":  false
+                                                  },
+                                                  {
+                                                      "metodo":  "objectIds",
+                                                      "cantidad_ids":  121,
+                                                      "cantidad_features":  121,
+                                                      "exceededTransferLimit":  false
+                                                  }
+                                              ]
+                              }
+}

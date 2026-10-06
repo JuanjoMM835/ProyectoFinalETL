@@ -105,13 +105,16 @@ def test_puntos_de_miles_solo_en_conteos(configuracion, muestra, valor, esperado
 
 
 def test_coberturas_no_se_recortan(configuracion, muestra):
-    """Preservar neta >100 pendiente y bruta >100 como observacion informativa."""
+    """La metodologia MEN admite neta >100: conservarla con marca informativa."""
     limpia, reporte = limpiar_educacion(muestra, configuracion)
     assert limpia.loc[1, "cobertura_neta"] == 105
-    assert limpia.loc[1, "estado_cobertura_neta"] == "pendiente_revision"
+    assert limpia.loc[1, "estado_cobertura_neta"] == "disponible"
+    assert bool(limpia.loc[1, "cobertura_neta_superior_100_informativo"])
+    assert not bool(limpia.loc[0, "cobertura_neta_superior_100_informativo"])
     assert limpia.loc[1, "cobertura_bruta"] == 120
     assert reporte["coberturas_brutas_superiores_100_informativo"] == 2
-    assert reporte["completitud_criticas_educativas"]["cobertura_neta"]["valores_utilizables"] == 1
+    assert reporte["completitud_criticas_educativas"]["cobertura_neta"]["valores_utilizables"] == 2
+    assert reporte["coberturas_netas_superiores_100_informativo"] == 1
 
 
 def test_duplicado_tras_normalizar_detiene_proceso(configuracion, muestra):

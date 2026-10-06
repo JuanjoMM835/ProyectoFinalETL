@@ -1,5 +1,7 @@
 # Primera implementación: extracción y limpieza de educación
 
+> Esta página conserva los resultados iniciales del contrato 1.0. La revisión 1.1 del punto 6 corrigió la exclusión automática de cobertura neta >100 con la ficha oficial MEN: los 984 casos se conservan como marcas informativas. Consultar [etapa_indicadores.md](etapa_indicadores.md) para los controles vigentes.
+
 Fecha: 2026-10-05. Esta implementación corresponde al componente educativo del punto 3 del plan. Las otras fuentes, la persistencia Silver y la integración Gold quedan para las etapas siguientes.
 
 ## 1. Cómo se utilizó el ejemplo `proyecto_final_2026`

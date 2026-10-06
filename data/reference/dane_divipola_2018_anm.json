@@ -1,0 +1,197 @@
+{
+    "displayFieldName":  "DPTO_CCDGO",
+    "fieldAliases":  {
+                         "OBJECTID_1":  "OBJECTID_1",
+                         "DPTO_CCDGO":  "Código Departamento",
+                         "MPIO_CCDGO":  "Código ANM",
+                         "MPIO_CNMBR":  "Area no municipalizada"
+                     },
+    "fields":  [
+                   {
+                       "name":  "OBJECTID_1",
+                       "type":  "esriFieldTypeOID",
+                       "alias":  "OBJECTID_1"
+                   },
+                   {
+                       "name":  "DPTO_CCDGO",
+                       "type":  "esriFieldTypeString",
+                       "alias":  "Código Departamento",
+                       "length":  2
+                   },
+                   {
+                       "name":  "MPIO_CCDGO",
+                       "type":  "esriFieldTypeString",
+                       "alias":  "Código ANM",
+                       "length":  5
+                   },
+                   {
+                       "name":  "MPIO_CNMBR",
+                       "type":  "esriFieldTypeString",
+                       "alias":  "Area no municipalizada",
+                       "length":  60
+                   }
+               ],
+    "features":  [
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  1,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91263",
+                                            "MPIO_CNMBR":  "EL ENCANTO"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  2,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91405",
+                                            "MPIO_CNMBR":  "LA CHORRERA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  3,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91407",
+                                            "MPIO_CNMBR":  "LA PEDRERA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  4,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91430",
+                                            "MPIO_CNMBR":  "LA VICTORIA (Pacoa)"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  5,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91460",
+                                            "MPIO_CNMBR":  "MIRITÍ-PARANÁ (Campoamor)"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  6,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91530",
+                                            "MPIO_CNMBR":  "PUERTO ALEGRÍA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  7,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91536",
+                                            "MPIO_CNMBR":  "PUERTO ARICA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  8,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91669",
+                                            "MPIO_CNMBR":  "SANTANDER (Araracuara)"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  9,
+                                            "DPTO_CCDGO":  "91",
+                                            "MPIO_CCDGO":  "91798",
+                                            "MPIO_CNMBR":  "TARAPACÁ"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  10,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94343",
+                                            "MPIO_CNMBR":  "BARRANCO MINA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  11,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94663",
+                                            "MPIO_CNMBR":  "MAPIRIPANA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  12,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94883",
+                                            "MPIO_CNMBR":  "SAN FELIPE"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  13,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94884",
+                                            "MPIO_CNMBR":  "PUERTO COLOMBIA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  14,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94885",
+                                            "MPIO_CNMBR":  "LA GUADALUPE"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  15,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94886",
+                                            "MPIO_CNMBR":  "CACAHUAL"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  16,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94887",
+                                            "MPIO_CNMBR":  "PANÁ-PANÁ (Campo Alegre)"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  17,
+                                            "DPTO_CCDGO":  "94",
+                                            "MPIO_CCDGO":  "94888",
+                                            "MPIO_CNMBR":  "MORICHAL (Morichal Nuevo)"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  18,
+                                            "DPTO_CCDGO":  "97",
+                                            "MPIO_CCDGO":  "97511",
+                                            "MPIO_CNMBR":  "PACOA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  19,
+                                            "DPTO_CCDGO":  "97",
+                                            "MPIO_CCDGO":  "97777",
+                                            "MPIO_CNMBR":  "PAPUNAUA"
+                                        }
+                     },
+                     {
+                         "attributes":  {
+                                            "OBJECTID_1":  20,
+                                            "DPTO_CCDGO":  "97",
+                                            "MPIO_CCDGO":  "97889",
+                                            "MPIO_CNMBR":  "YAVARATÉ "
+                                        }
+                     }
+                 ],
+    "exceededTransferLimit":  false
+}

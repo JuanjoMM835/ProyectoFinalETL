@@ -1,8 +1,9 @@
-"""Coordinar la preparacion de fuentes y la persistencia de la capa Silver."""
+"""Coordinar fuentes, Silver, integracion territorial e indicadores Gold."""
 
 import argparse
 import logging
 import platform
+from copy import deepcopy
 from contextlib import closing
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,13 +18,24 @@ from src.extract.extract_education import extraer_educacion
 from src.extract.extract_population import extraer_poblacion
 from src.extract.extract_divipola import extraer_divipola
 from src.extract.extract_internet import extraer_internet
+from src.extract.read_silver import leer_silver
+from src.extract.read_integrated import leer_panel_integrado
 from src.transform.clean_education import limpiar_educacion
 from src.transform.clean_population import limpiar_poblacion
 from src.transform.clean_divipola import limpiar_divipola
 from src.transform.clean_internet import limpiar_internet
 from src.transform.quality_silver import construir_reporte_silver
-from src.load.execution_metadata import capturar_entradas, crear_metadata_silver, huella_archivo
+from src.transform.integrate_sources import integrar_fuentes
+from src.transform.build_indicators import construir_indicadores
+from src.transform.resolve_territory import cargar_evidencia_territorial
+from src.load.execution_metadata import (
+    capturar_entradas, crear_metadata_silver, huella_archivo,
+    capturar_codigo, crear_metadata_integracion,
+    crear_metadata_indicadores,
+)
 from src.load.export_results import exportar_silver, _validar_nombre
+from src.load.export_integration import exportar_integracion
+from src.load.export_gold import exportar_gold
 
 
 # __file__ permite encontrar el proyecto incluso desde otra carpeta de terminal.
@@ -102,18 +114,18 @@ def _abrir_log_silver(configuracion: Dict[str, Any]) -> logging.FileHandler:
     carpeta = (RAIZ_PROYECTO / configuracion["paths"]["logs_dir"]).resolve()
     if carpeta != RAIZ_PROYECTO and RAIZ_PROYECTO not in carpeta.parents:
         raise ValueError("La carpeta de logs debe quedar dentro del proyecto.")
-    for opcion in ("bronze_dir", "gold_dir"):
+    for opcion in ("bronze_dir", "silver_dir", "gold_dir"):
         protegida = (RAIZ_PROYECTO / configuracion["paths"][opcion]).resolve()
         if carpeta == protegida or protegida in carpeta.parents:
-            raise ValueError("El log Silver no debe escribir en Bronze ni Gold.")
+            raise ValueError("El log debe escribir fuera de las carpetas de datos.")
     nombre = _validar_nombre(configuracion["logging"]["file_name"], ".log", "logging.file_name")
     ruta = (carpeta / nombre).resolve()
     if ruta != RAIZ_PROYECTO and RAIZ_PROYECTO not in ruta.parents:
         raise ValueError("El archivo log debe quedar dentro del proyecto.")
-    for opcion in ("bronze_dir", "gold_dir"):
+    for opcion in ("bronze_dir", "silver_dir", "gold_dir"):
         protegida = (RAIZ_PROYECTO / configuracion["paths"][opcion]).resolve()
         if ruta == protegida or protegida in ruta.parents:
-            raise ValueError("El archivo log no debe escribir en Bronze ni Gold.")
+            raise ValueError("El archivo log debe escribir fuera de las carpetas de datos.")
     for fuente in configuracion["sources"].values():
         if ruta == (RAIZ_PROYECTO / fuente["path"]).resolve():
             raise ValueError("El log no puede sobrescribir una fuente de entrada.")
@@ -178,6 +190,114 @@ def ejecutar_silver(
         raise
     finally:
         # No duplicar manejadores al ejecutar Silver varias veces desde un notebook.
+        logging.getLogger().removeHandler(log_archivo)
+        log_archivo.close()
+        logging.getLogger().setLevel(nivel_anterior)
+
+
+def ejecutar_integracion(
+    ruta_configuracion: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Leer Silver, cruzar el universo MEN y guardar un panel con diagnosticos."""
+    ruta = Path(ruta_configuracion or RAIZ_PROYECTO / "config" / "config.yaml").resolve()
+    huella_config = huella_archivo(ruta)
+    configuracion = _cargar_configuracion(ruta)
+    codigo = capturar_codigo(configuracion, RAIZ_PROYECTO)
+    ejecucion_id, inicio = str(uuid4()), datetime.now(timezone.utc).isoformat()
+    # Reutilizamos el manejo del log, con un nombre propio para esta etapa.
+    config_log = deepcopy(configuracion)
+    config_log["logging"]["file_name"] = configuracion["logging"]["integration_file_name"]
+    log_archivo = _abrir_log_silver(config_log)
+    nivel_anterior = logging.getLogger().level
+    logging.getLogger().setLevel(configuracion["logging"]["level"])
+    logger = logging.getLogger(__name__)
+    try:
+        logger.info("Inicio integracion, ejecucion %s.", ejecucion_id)
+        # El extractor nuevo consume las salidas ya limpias, no los originales.
+        tablas, procedencia = leer_silver(configuracion, RAIZ_PROYECTO)
+        evidencia = deepcopy(procedencia["catalogo_temporal"])
+        referencias = cargar_evidencia_territorial(configuracion, RAIZ_PROYECTO)
+        evidencia.update(referencias)
+        procedencia["entradas_referencia"] = referencias.get("entradas_referencia", [])
+        panel, reporte = integrar_fuentes(tablas, configuracion, evidencia)
+        reporte["ejecucion_id"] = ejecucion_id
+        reporte["version_contrato"] = configuracion["project"]["data_contract"]["version"]
+        reporte["periodo"] = {"inicio": configuracion["processing"]["year_start"],
+                              "fin": configuracion["processing"]["year_end"]}
+        metadata = crear_metadata_integracion(
+            configuracion, RAIZ_PROYECTO, ruta, ejecucion_id, inicio,
+            procedencia, huella_config, codigo,
+        )
+        metadata["entorno"] = {
+            "python": platform.python_version(), "pandas": pd.__version__,
+            "pyarrow": pyarrow.__version__, "pyyaml": yaml.__version__,
+        }
+        # El resumen facilita la consola; el reporte conserva el detalle completo.
+        metadata["resumen_integracion"] = {
+            "filas_panel": len(panel), "diagnosticos": reporte["diagnosticos"],
+            "homologacion": reporte["homologacion"],
+            "conjunto_critico": reporte["conjunto_critico"],
+            "aceptacion_panel": reporte["aceptacion_panel"],
+        }
+        resultado = exportar_integracion(panel, reporte, metadata, configuracion, RAIZ_PROYECTO)
+        logger.info("Integracion completada: %s filas, aceptacion %s, estado exploratorio.",
+                    len(panel), reporte["aceptacion_panel"]["estado"])
+        return resultado
+    except Exception:
+        logger.exception("Integracion %s fallida; consultar la causa.", ejecucion_id)
+        raise
+    finally:
+        # Evitar manejadores duplicados al llamar esta funcion desde un notebook.
+        logging.getLogger().removeHandler(log_archivo)
+        log_archivo.close()
+        logging.getLogger().setLevel(nivel_anterior)
+
+
+def ejecutar_gold(
+    ruta_configuracion: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Calcular seis indicadores e índice de prioridad en la Gold exploratoria."""
+    ruta = Path(ruta_configuracion or RAIZ_PROYECTO / "config" / "config.yaml").resolve()
+    huella_config = huella_archivo(ruta)
+    configuracion = _cargar_configuracion(ruta)
+    codigo = capturar_codigo(configuracion, RAIZ_PROYECTO)
+    ejecucion_id, inicio = str(uuid4()), datetime.now(timezone.utc).isoformat()
+    config_log = deepcopy(configuracion)
+    config_log["logging"]["file_name"] = configuracion["logging"]["gold_file_name"]
+    log_archivo = _abrir_log_silver(config_log)
+    nivel_anterior = logging.getLogger().level
+    logging.getLogger().setLevel(configuracion["logging"]["level"])
+    logger = logging.getLogger(__name__)
+    try:
+        logger.info("Inicio indicadores, ejecucion %s.", ejecucion_id)
+        panel, procedencia = leer_panel_integrado(configuracion, RAIZ_PROYECTO)
+        datos, reporte = construir_indicadores(panel, configuracion)
+        reporte["ejecucion_id"] = ejecucion_id
+        reporte["version_contrato"] = configuracion["project"]["data_contract"]["version"]
+        reporte["aceptacion_panel"] = deepcopy(procedencia["aceptacion_panel"])
+        reporte["periodo"] = {"inicio": configuracion["processing"]["year_start"],
+                              "fin": configuracion["processing"]["year_end"]}
+        # Crear archivos Gold no cambia la aceptacion de los datos que los originan.
+        metadata = crear_metadata_indicadores(
+            configuracion, RAIZ_PROYECTO, ruta, ejecucion_id, inicio,
+            procedencia, huella_config, codigo,
+        )
+        metadata["entorno"] = {
+            "python": platform.python_version(), "pandas": pd.__version__,
+            "pyarrow": pyarrow.__version__, "pyyaml": yaml.__version__,
+        }
+        metadata["resumen_indicadores"] = {
+            "filas_panel": len(datos), "indicadores": reporte["indicadores"],
+            "aceptacion_panel": reporte["aceptacion_panel"],
+        }
+        resultado = exportar_gold(datos, reporte, metadata, configuracion, RAIZ_PROYECTO)
+        logger.info("Indicadores guardados: %s filas, estado exploratorio, aceptacion %s.",
+                    len(datos), reporte["aceptacion_panel"]["estado"])
+        return resultado
+    except Exception:
+        logger.exception("Indicadores %s fallidos; consultar la causa.", ejecucion_id)
+        raise
+    finally:
         logging.getLogger().removeHandler(log_archivo)
         log_archivo.close()
         logging.getLogger().setLevel(nivel_anterior)
@@ -283,17 +403,61 @@ def _mostrar_silver(metadata: Dict[str, Any]) -> None:
     print("Estado: exploratorio. La aceptacion del panel integrado todavia no se evalua.")
 
 
+def _mostrar_integracion(metadata: Dict[str, Any]) -> None:
+    """Explicar coincidencias, calidad y alcance del panel intermedio guardado."""
+    resumen = metadata["resumen_integracion"]
+    print("\nPanel integrado exploratorio guardado y verificado")
+    print("Ejecucion:", metadata["ejecucion_id"])
+    print("Filas MEN conservadas:", resumen["filas_panel"])
+    for fuente in ("poblacion", "internet", "divipola"):
+        diagnostico = resumen["diagnosticos"][fuente]
+        print("{}: {} coincidencias; {} filas MEN sin coincidencia.".format(
+            fuente, diagnostico["coincidencias"], diagnostico["sin_coincidencia"]))
+    print("Homologacion temporal acreditada: {:.2f}%".format(resumen["homologacion"]["porcentaje"]))
+    print("Seis variables utilizables segun las fuentes: {:.2f}%".format(
+        resumen["conjunto_critico"]["porcentaje_utilizables_fuente"]))
+    print("Aceptacion del panel:", resumen["aceptacion_panel"]["estado"])
+    print("Panel:", metadata["salidas"]["panel_integrado"]["archivo"])
+    print("Reporte:", metadata["reporte_integracion"]["archivo"])
+    print("Metadata:", metadata["metadata_integracion"]["archivo"])
+    print("La identidad se acredita por codigo y anio exactos. Para calcular indicadores: --gold.")
+
+
+def _mostrar_gold(metadata: Dict[str, Any]) -> None:
+    """Distinguir resultados acreditados y diagnosticos locales en la consola."""
+    resumen = metadata["resumen_indicadores"]
+    print("\nIndicadores Gold exploratorios guardados y verificados")
+    print("Filas MEN conservadas:", resumen["filas_panel"])
+    for nombre, controles in resumen["indicadores"].items():
+        print("{}: {} calculables con identidad acreditada; {} candidatos de diagnostico.".format(
+            nombre, controles["numerador_calculables"], controles["numerador_diagnostico"]))
+    print("Aceptacion del panel:", resumen["aceptacion_panel"]["estado"])
+    for nombre, salida in metadata["salidas"].items():
+        print("{}: {}".format(nombre, salida["archivo"]))
+    print("Reporte:", metadata["reporte_indicadores"]["archivo"])
+    print("Metadata:", metadata["metadata_indicadores"]["archivo"])
+    print("Los campos _diagnostico no acreditan identidad territorial ni Gold validada.")
+
+
 def main() -> None:
-    """Elegir preparacion en memoria o persistencia conjunta de la capa Silver."""
-    parser = argparse.ArgumentParser(description="Preparar una fuente o guardar las cuatro tablas Silver.")
+    """Elegir fuente, Silver, integracion o calculo de indicadores Gold."""
+    parser = argparse.ArgumentParser(description="Preparar fuentes, Silver, panel MEN o indicadores Gold.")
     modo = parser.add_mutually_exclusive_group()
     # Conservamos educacion como opcion predeterminada del comando anterior.
     modo.add_argument("--fuente", choices=["educacion", "poblacion", "divipola", "internet"], default="educacion",
                         help="Fuente que se preparara; por defecto, educacion.")
     modo.add_argument("--silver", action="store_true", help="Guardar las cuatro tablas Silver y sus reportes.")
+    modo.add_argument("--integrar", action="store_true", help="Integrar los cuatro Silver sin releer Bronze.")
+    modo.add_argument("--gold", action="store_true", help="Calcular indicadores desde el panel integrado y guardar Parquet/CSV.")
     parser.add_argument("--config", type=Path, help="Ruta opcional a otro archivo YAML.")
     argumentos = parser.parse_args()
     try:
+        if argumentos.gold:
+            _mostrar_gold(ejecutar_gold(argumentos.config))
+            return
+        if argumentos.integrar:
+            _mostrar_integracion(ejecutar_integracion(argumentos.config))
+            return
         if argumentos.silver:
             _mostrar_silver(ejecutar_silver(argumentos.config))
             return
@@ -311,7 +475,8 @@ def main() -> None:
             _mostrar_educacion(datos, reporte)
     except (OSError, ValueError, KeyError, TypeError, AssertionError, RuntimeError, yaml.YAMLError) as error:
         # Una entrada invalida debe producir salida de error, no aparentar exito.
-        logging.error("No se pudo preparar %s: %s", "silver" if argumentos.silver else argumentos.fuente, error)
+        etapa = "indicadores" if argumentos.gold else "integracion" if argumentos.integrar else "silver" if argumentos.silver else argumentos.fuente
+        logging.error("No se pudo preparar %s: %s", etapa, error)
         raise SystemExit(1) from error
     # Los comandos de una sola fuente siguen devolviendo resultados en memoria.
     print("\nResultado en memoria: esta etapa no genera archivos Silver ni Gold.")

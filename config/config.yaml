@@ -11,7 +11,7 @@ project:
   configuration_updated_on: "2026-10-06"
   data_contract:
     path: docs/contrato_datos.md
-    version: "1.0"
+    version: "1.1"
 
 paths:
   data_dir: data
@@ -154,10 +154,26 @@ quality:
   clip_education_rates_automatically: false
 
 indicators:
-  # Estos indicadores requieren las verificaciones o la metodologia pendientes del contrato.
+  # La velocidad y fibra quedan fuera de esta entrega; no se fabrican sin variables validadas.
   weighted_speed_enabled: false
   fiber_share_enabled: false
-  priority_index_enabled: false
+  priority_index_enabled: true
+  priority_index:
+    # El índice es interpretable: conectividad y cobertura son déficits; deserción es riesgo.
+    weights:
+      connectivity_deficit: 0.4
+      dropout: 0.3
+      coverage_deficit: 0.3
+    # Score normalizado: [0, medium) baja, [medium, high) media, desde high alta.
+    thresholds:
+      medium: 0.33
+      high: 0.66
+
+territorial_evidence:
+  # Copias oficiales fechadas: se acredita solo el codigo y anio con evidencia.
+  # No se interpolan anos faltantes ni se reasignan los codigos historicos.
+  enabled: true
+  manifest: data/reference/catalogos_dane.json
 
 outputs:
   # Nombres de archivo: los Silver van en paths.silver_dir y los Gold en paths.gold_dir.
@@ -165,6 +181,12 @@ outputs:
   population_silver: poblacion_limpia.parquet
   internet_silver: internet_municipio_anio.parquet
   divipola_silver: divipola_limpia.parquet
+  # Panel intermedio del punto 5; los indicadores del punto 6 tienen otro nombre.
+  integration_panel: panel_integrado_exploratorio.parquet
+  integration_quality_report: reporte_integracion.json  # En paths.logs_dir.
+  integration_metadata: metadata_integracion.json  # En paths.logs_dir.
+  gold_quality_report: reporte_indicadores.json  # En paths.logs_dir.
+  gold_metadata: metadata_indicadores.json  # En paths.logs_dir.
   indicators_gold: indicadores_municipio_anio.parquet
   indicators_gold_csv: indicadores_municipio_anio.csv
   quality_report: reporte_calidad.json  # En paths.logs_dir.
@@ -178,3 +200,5 @@ logging:
   level: INFO
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
   file_name: etl_pipeline.log
+  integration_file_name: etl_integracion.log  # Historial independiente de Silver.
+  gold_file_name: etl_indicadores.log  # Historial del calculo y exportacion de indicadores.

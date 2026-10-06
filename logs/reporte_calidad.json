@@ -1,7 +1,7 @@
 {
   "version_reporte": "1.0",
-  "version_contrato": "1.0",
-  "ejecucion_id": "457c17ca-dbde-40c5-b70d-eaee1dfd3a08",
+  "version_contrato": "1.1",
+  "ejecucion_id": "0b145b5b-7a98-4c59-850d-10baf95065df",
   "etapa": "silver",
   "estado": "exploratorio",
   "controles_estructura": "superados",
@@ -83,7 +83,8 @@
         "estado_cobertura_neta": "string",
         "estado_desercion": "string",
         "estado_reprobacion": "string",
-        "departamento_inconsistente": "boolean",
+        "cobertura_neta_superior_100_informativo": "boolean",
+        "departamento_inconsistente": "bool[pyarrow]",
         "estado_homologacion": "string"
       },
       "faltantes_por_columna": {
@@ -140,13 +141,13 @@
         "estado_cobertura_neta": 0,
         "estado_desercion": 0,
         "estado_reprobacion": 0,
+        "cobertura_neta_superior_100_informativo": 0,
         "departamento_inconsistente": 0,
         "estado_homologacion": 0
       },
       "estados": {
         "estado_cobertura_neta": {
-          "disponible": 6866,
-          "pendiente_revision": 984
+          "disponible": 7850
         },
         "estado_desercion": {
           "disponible": 7845,
@@ -165,8 +166,8 @@
           "denominador": 7850,
           "numerador_presencia_numerica": 7850,
           "porcentaje_presencia_numerica": 100.0,
-          "numerador_utilizables_fuente": 6866,
-          "porcentaje_utilizables_fuente": 87.46496815286623
+          "numerador_utilizables_fuente": 7850,
+          "porcentaje_utilizables_fuente": 100.0
         },
         "desercion": {
           "denominador": 7850,
@@ -185,6 +186,7 @@
       },
       "controles_adicionales": {
         "poblacion_5_16_no_utilizable": 80,
+        "cobertura_neta_superior_100_informativo": 984,
         "departamento_inconsistente": 0
       },
       "reporte_transformacion": {
@@ -293,13 +295,19 @@
         "departamentos_inconsistentes": 0,
         "poblaciones_escolares_no_utilizables": 80,
         "coberturas_brutas_superiores_100_informativo": 3185,
+        "coberturas_netas_superiores_100_informativo": 984,
+        "criterio_cobertura_neta": {
+          "superar_100_no_invalida_por_si_solo": true,
+          "referencia": "https://portalsineb.mineducacion.gov.co/1782/articles-412165_Cobertura_02_V2024.pdf",
+          "alcance": "Magnitud informativa compatible con la metodologia; no certifica cada registro individual."
+        },
         "completitud_criticas_educativas": {
           "cobertura_neta": {
             "denominador": 7850,
             "valores_numericos_presentes": 7850,
-            "valores_utilizables": 6866,
+            "valores_utilizables": 7850,
             "porcentaje_presencia_numerica": 100.0,
-            "porcentaje_utilizables": 87.46496815286623
+            "porcentaje_utilizables": 100.0
           },
           "desercion": {
             "denominador": 7850,
@@ -319,9 +327,9 @@
         "conjunto_educativo": {
           "denominador": 7850,
           "filas_con_tres_valores_numericos": 7845,
-          "filas_con_tres_valores_utilizables": 6861,
+          "filas_con_tres_valores_utilizables": 7845,
           "porcentaje_presencia_numerica": 99.93630573248407,
-          "porcentaje_utilizables": 87.40127388535032
+          "porcentaje_utilizables": 99.93630573248407
         },
         "columnas_nuevas_no_tipificadas": [],
         "faltantes_por_columna": {
@@ -369,8 +377,7 @@
         },
         "estados_indicadores": {
           "cobertura_neta": {
-            "disponible": 6866,
-            "pendiente_revision": 984
+            "disponible": 7850
           },
           "desercion": {
             "disponible": 7845,
@@ -597,7 +604,7 @@
         "suma_componentes": "Int64",
         "diferencia_componentes": "Int64",
         "poblacion_consistente": "boolean",
-        "departamento_inconsistente": "boolean",
+        "departamento_inconsistente": "bool[pyarrow]",
         "metadatos_incompletos": "bool",
         "revision_territorial_pendiente": "bool",
         "estado_poblacion": "string",
@@ -1455,14 +1462,14 @@
         "tipo_territorio_original": "string",
         "longitud_original": "string",
         "latitud_original": "string",
-        "tipo_no_resuelto": "boolean",
-        "departamento_inconsistente": "boolean",
+        "tipo_no_resuelto": "bool[pyarrow]",
+        "departamento_inconsistente": "bool[pyarrow]",
         "metadatos_incompletos": "bool",
         "departamento_nombre_inconsistente": "bool",
         "estado_catalogo": "string",
         "estado_longitud": "string",
         "estado_latitud": "string",
-        "coordenadas_utilizables": "boolean"
+        "coordenadas_utilizables": "bool[pyarrow]"
       },
       "faltantes_por_columna": {
         "codigo_municipio": 0,

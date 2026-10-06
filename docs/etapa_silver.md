@@ -1,5 +1,7 @@
 # Persistencia de Silver y reportes de calidad
 
+> Esta página documenta la primera publicación Silver con contrato 1.0. El punto 6 regeneró las salidas con contrato 1.1 y la revisión metodológica MEN; consultar [etapa_indicadores.md](etapa_indicadores.md) para los resultados vigentes.
+
 Fecha: 2026-10-06. Esta etapa implementa el punto 4 del orden acordado: guardar las cuatro fuentes preparadas y sus evidencias. El contrato sigue en la versión 1.0; las reglas de limpieza no cambian.
 
 ## 1. Qué cambia al guardar Silver

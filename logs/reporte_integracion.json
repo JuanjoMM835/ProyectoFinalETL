@@ -1,0 +1,939 @@
+{
+  "version_reporte": "1.0",
+  "etapa": "integracion",
+  "estado": "exploratorio",
+  "filas_panel": 7850,
+  "denominador_panel": 7850,
+  "diagnosticos": {
+    "filas_universo_educativo": 7850,
+    "filas_despues_uniones": 7850,
+    "llaves_duplicadas": 0,
+    "poblacion": {
+      "filas_silver": 7861,
+      "coincidencias": 7850,
+      "sin_coincidencia": 0,
+      "filas_extras_fuera_universo": 11,
+      "extras_fuera_universo": [
+        {
+          "codigo_municipio": "27493",
+          "anio": 2018,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 1797,
+          "fila_excel_cabecera": 1795,
+          "fila_excel_centros_rural": 1796,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "27493",
+          "anio": 2019,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 5166,
+          "fila_excel_cabecera": 5164,
+          "fila_excel_centros_rural": 5165,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "27493",
+          "anio": 2020,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 8535,
+          "fila_excel_cabecera": 8533,
+          "fila_excel_centros_rural": 8534,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "27493",
+          "anio": 2021,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 11904,
+          "fila_excel_cabecera": 11902,
+          "fila_excel_centros_rural": 11903,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "27493",
+          "anio": 2022,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 15273,
+          "fila_excel_cabecera": 15271,
+          "fila_excel_centros_rural": 15272,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "27493",
+          "anio": 2023,
+          "codigo_departamento": "27",
+          "municipio": "Nuevo Belén de Bajirá",
+          "departamento": "Chocó",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 18642,
+          "fila_excel_cabecera": 18640,
+          "fila_excel_centros_rural": 18641,
+          "codigo_municipio_original": "27493",
+          "codigo_departamento_original": "27",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2020,
+          "codigo_departamento": "94",
+          "municipio": "Mapiripana (ANM)",
+          "departamento": "Guainía",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 10056,
+          "fila_excel_cabecera": 10054,
+          "fila_excel_centros_rural": 10055,
+          "codigo_municipio_original": "94663",
+          "codigo_departamento_original": "94",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2021,
+          "codigo_departamento": "94",
+          "municipio": "Mapiripana (ANM)",
+          "departamento": "Guainía",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 13425,
+          "fila_excel_cabecera": 13423,
+          "fila_excel_centros_rural": 13424,
+          "codigo_municipio_original": "94663",
+          "codigo_departamento_original": "94",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2022,
+          "codigo_departamento": "94",
+          "municipio": "Mapiripana (ANM)",
+          "departamento": "Guainía",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 16794,
+          "fila_excel_cabecera": 16792,
+          "fila_excel_centros_rural": 16793,
+          "codigo_municipio_original": "94663",
+          "codigo_departamento_original": "94",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2023,
+          "codigo_departamento": "94",
+          "municipio": "Mapiripana (ANM)",
+          "departamento": "Guainía",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 20163,
+          "fila_excel_cabecera": 20161,
+          "fila_excel_centros_rural": 20162,
+          "codigo_municipio_original": "94663",
+          "codigo_departamento_original": "94",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2024,
+          "codigo_departamento": "94",
+          "municipio": "Mapiripana (ANM)",
+          "departamento": "Guainía",
+          "poblacion_total": 0,
+          "poblacion_cabecera": 0,
+          "poblacion_centros_rural": 0,
+          "poblacion_total_original": "0",
+          "poblacion_cabecera_original": "0",
+          "poblacion_centros_rural_original": "0",
+          "fila_excel_total": 23532,
+          "fila_excel_cabecera": 23530,
+          "fila_excel_centros_rural": 23531,
+          "codigo_municipio_original": "94663",
+          "codigo_departamento_original": "94",
+          "areas_incompletas": false,
+          "suma_componentes": 0,
+          "diferencia_componentes": 0,
+          "poblacion_consistente": true,
+          "departamento_inconsistente": false,
+          "metadatos_incompletos": false,
+          "revision_territorial_pendiente": true,
+          "estado_poblacion": "pendiente_revision",
+          "denominador_positivo": false,
+          "poblacion_para_ratios_utilizable": false,
+          "estado_homologacion": "pendiente_revision"
+        }
+      ],
+      "filas_men_sin_coincidencia": [],
+      "departamentos_incompatibles": 0,
+      "departamentos_desconocidos": 0
+    },
+    "internet": {
+      "filas_silver": 7815,
+      "coincidencias": 7813,
+      "sin_coincidencia": 37,
+      "filas_extras_fuera_universo": 2,
+      "extras_fuera_universo": [
+        {
+          "codigo_municipio": "27086",
+          "anio": 2018,
+          "codigo_departamento": "27",
+          "municipio": "BELEN DE BAJIRA",
+          "departamento": "CHOCÓ",
+          "accesos_t4": 2,
+          "accesos_validos_parcial": 2,
+          "trimestre_referencia": 4,
+          "registros_fuente": 1,
+          "registros_accesos_no_utilizables": 0,
+          "registro_origen_min": 377294,
+          "registro_origen_max": 377294,
+          "revision_territorial_pendiente": true,
+          "departamento_inconsistente": false,
+          "metadatos_reporte_pendientes": false,
+          "segmento_pendiente_revision": false,
+          "estado_internet": "pendiente_revision",
+          "accesos_para_indicadores_utilizables": false,
+          "estado_homologacion": "pendiente_revision",
+          "codigos_municipio_originales": "[\"27086\"]",
+          "nombres_municipio_originales": "[\"BELEN DE BAJIRA\"]",
+          "codigos_departamento_originales": "[\"27\"]",
+          "nombres_departamento_originales": "[\"CHOCÓ\"]",
+          "segmentos_originales": "[[\"107\", \"Corporativo\"]]",
+          "tecnologias_originales": "[[\"103\", \"Satelital\"]]"
+        },
+        {
+          "codigo_municipio": "27086",
+          "anio": 2019,
+          "codigo_departamento": "27",
+          "municipio": "BELEN DE BAJIRA",
+          "departamento": "CHOCÓ",
+          "accesos_t4": 4,
+          "accesos_validos_parcial": 4,
+          "trimestre_referencia": 4,
+          "registros_fuente": 2,
+          "registros_accesos_no_utilizables": 0,
+          "registro_origen_min": 618984,
+          "registro_origen_max": 624906,
+          "revision_territorial_pendiente": true,
+          "departamento_inconsistente": false,
+          "metadatos_reporte_pendientes": false,
+          "segmento_pendiente_revision": false,
+          "estado_internet": "pendiente_revision",
+          "accesos_para_indicadores_utilizables": false,
+          "estado_homologacion": "pendiente_revision",
+          "codigos_municipio_originales": "[\"27086\"]",
+          "nombres_municipio_originales": "[\"BELEN DE BAJIRA\"]",
+          "codigos_departamento_originales": "[\"27\"]",
+          "nombres_departamento_originales": "[\"CHOCÓ\"]",
+          "segmentos_originales": "[[\"101\", \"Residencial - Estrato 1\"], [\"102\", \"Residencial - Estrato 2\"]]",
+          "tecnologias_originales": "[[\"103\", \"Satelital\"]]"
+        }
+      ],
+      "filas_men_sin_coincidencia": [
+        {
+          "codigo_municipio": "91430",
+          "anio": 2023,
+          "municipio": "LA VICTORIA",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91460",
+          "anio": 2023,
+          "municipio": "MIRITÍ - PARANÁ",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2023,
+          "municipio": "PUERTO SANTANDER",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "94884",
+          "anio": 2023,
+          "municipio": "PUERTO COLOMBIA",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "94887",
+          "anio": 2023,
+          "municipio": "PANA PANA",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "91407",
+          "anio": 2018,
+          "municipio": "LA PEDRERA",
+          "departamento": "Amazonas"
+        },
+        {
+          "codigo_municipio": "91430",
+          "anio": 2018,
+          "municipio": "LA VICTORIA (Pacoa)",
+          "departamento": "Amazonas"
+        },
+        {
+          "codigo_municipio": "91460",
+          "anio": 2018,
+          "municipio": "MIRITÍ-PARANÁ (Campoamor)",
+          "departamento": "Amazonas"
+        },
+        {
+          "codigo_municipio": "91536",
+          "anio": 2018,
+          "municipio": "PUERTO ARICA",
+          "departamento": "Amazonas"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2018,
+          "municipio": "SANTANDER (Araracuara)",
+          "departamento": "Amazonas"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2018,
+          "municipio": "Mapiripana",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94883",
+          "anio": 2018,
+          "municipio": "SAN FELIPE",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94884",
+          "anio": 2018,
+          "municipio": "PUERTO COLOMBIA",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94885",
+          "anio": 2018,
+          "municipio": "LA GUADALUPE",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94886",
+          "anio": 2018,
+          "municipio": "CACAHUAL",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94887",
+          "anio": 2018,
+          "municipio": "PANÁ-PANÁ (Campo Alegre)",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94888",
+          "anio": 2018,
+          "municipio": "MORICHAL (Morichal Nuevo)",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "97511",
+          "anio": 2018,
+          "municipio": "PACOA",
+          "departamento": "Vaupés"
+        },
+        {
+          "codigo_municipio": "97777",
+          "anio": 2018,
+          "municipio": "PAPUNAUA",
+          "departamento": "Vaupés"
+        },
+        {
+          "codigo_municipio": "97889",
+          "anio": 2018,
+          "municipio": "YAVARATÉ",
+          "departamento": "Vaupés"
+        },
+        {
+          "codigo_municipio": "91430",
+          "anio": 2019,
+          "municipio": "LA VICTORIA",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2019,
+          "municipio": "PUERTO SANTANDER",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2019,
+          "municipio": "Mapiripana",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94884",
+          "anio": 2019,
+          "municipio": "PUERTO COLOMBIA",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "94885",
+          "anio": 2019,
+          "municipio": "LA GUADALUPE",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "94887",
+          "anio": 2019,
+          "municipio": "PANA PANA",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "97777",
+          "anio": 2019,
+          "municipio": "PAPUNAHUA",
+          "departamento": "VAUPÉS"
+        },
+        {
+          "codigo_municipio": "91460",
+          "anio": 2021,
+          "municipio": "MIRITÍ - PARANÁ",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2021,
+          "municipio": "PUERTO SANTANDER",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "94887",
+          "anio": 2021,
+          "municipio": "PANA PANA",
+          "departamento": "GUAINÍA"
+        },
+        {
+          "codigo_municipio": "97777",
+          "anio": 2021,
+          "municipio": "PAPUNAHUA",
+          "departamento": "VAUPÉS"
+        },
+        {
+          "codigo_municipio": "91460",
+          "anio": 2020,
+          "municipio": "MIRITÍ - PARANÁ",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2020,
+          "municipio": "PUERTO SANTANDER",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "97777",
+          "anio": 2020,
+          "municipio": "PAPUNAHUA",
+          "departamento": "VAUPÉS"
+        },
+        {
+          "codigo_municipio": "91430",
+          "anio": 2022,
+          "municipio": "LA VICTORIA",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91460",
+          "anio": 2022,
+          "municipio": "MIRITÍ - PARANÁ",
+          "departamento": "AMAZONAS"
+        },
+        {
+          "codigo_municipio": "91669",
+          "anio": 2022,
+          "municipio": "PUERTO SANTANDER",
+          "departamento": "AMAZONAS"
+        }
+      ],
+      "departamentos_incompatibles": 0,
+      "departamentos_desconocidos": 0
+    },
+    "divipola": {
+      "filas_silver": 1122,
+      "coincidencias": 7848,
+      "sin_coincidencia": 2,
+      "porcentaje_coincidencia_actual": 99.97452229299363,
+      "filas_men_sin_coincidencia": [
+        {
+          "codigo_municipio": "94663",
+          "anio": 2018,
+          "municipio": "Mapiripana",
+          "departamento": "Guainía"
+        },
+        {
+          "codigo_municipio": "94663",
+          "anio": 2019,
+          "municipio": "Mapiripana",
+          "departamento": "Guainía"
+        }
+      ],
+      "departamentos_incompatibles": 0,
+      "departamentos_desconocidos": 0,
+      "codigos_catalogo_fuera_universo": [],
+      "tipos_catalogo_actual_en_panel": {
+        "municipio": 7715,
+        "area_no_municipalizada": 126,
+        "isla": 7
+      }
+    }
+  },
+  "homologacion": {
+    "numerador_resueltos": 7833,
+    "denominador": 7850,
+    "porcentaje": 99.78343949044586,
+    "meta_pct": 95.0,
+    "cumple_meta": true,
+    "estados": {
+      "resuelto_catalogo": 7833,
+      "pendiente_revision": 17
+    },
+    "codigos_distintos_resueltos": 1119,
+    "codigos_distintos_pendientes": 4,
+    "evidencia_catalogo": {
+      "vigencia_historica_verificada": false,
+      "anio_inicio": null,
+      "anio_fin": null,
+      "referencia": null,
+      "motivo": "CSV disponible sin vigencia anual documentada",
+      "entradas_referencia": [
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\catalogos_dane.json",
+          "sha256": "2736d474df140288d463f0f042b27c36664d02955b9b6cf1bce223e17fac2110",
+          "tamano_bytes": 38677
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2018_municipios.json",
+          "sha256": "772cdf999ac50fb26287b5de004f6af0c8f452a475f42c30306c1107ca0370e8",
+          "tamano_bytes": 458582
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2018_municipios_metadata.json",
+          "sha256": "fb3540901f13606f9607bdb0dd17b8dfe9b5672ebbc9f18932ce4b66da11d2b3",
+          "tamano_bytes": 36887
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2018_anm.json",
+          "sha256": "66a04cb1bbb4bd91c1ce5ceb29514f16a431949e0a11b3916ccfdd3facaa9629",
+          "tamano_bytes": 9571
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2018_anm_metadata.json",
+          "sha256": "9587077746647d47542c89e56031b3680757adbdf2c8647219aac19af103e37b",
+          "tamano_bytes": 31577
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2019_municipios.json",
+          "sha256": "f3bbb22bd68695d3a4bec41e2f92e67fcfca603b68d52dbd07528d43041fb9d9",
+          "tamano_bytes": 870641
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2019_municipios_metadata.json",
+          "sha256": "0864466504f15043631c903a248bfb35356ba3cd8e6e4c30bb9b35edcf7a2d92",
+          "tamano_bytes": 36742
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2020_municipios.json",
+          "sha256": "1ed9fbf37e4ad8e49b9f1d45196bb9b6bca42acfbe0ae457635dcb44dd896329",
+          "tamano_bytes": 1022104
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2020_municipios_metadata.json",
+          "sha256": "1c1b285793dffa4d86b28cbe6e9b6295cfcf1fe10478b9beb5498858f528b1a7",
+          "tamano_bytes": 36021
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2021_municipios.json",
+          "sha256": "cb94d601b317f9002ea850cf80898c77cd2754bacf9ab37a1567fca6ecd10e26",
+          "tamano_bytes": 1022133
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2021_municipios_metadata.json",
+          "sha256": "993259c5dbebb47df75c22a1d335217e7695373e29482d26280eeeb13d489b34",
+          "tamano_bytes": 36272
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2022_municipios.json",
+          "sha256": "c1838dfc27adcb4235dcd17c8df93506bc71dfda3da81f3b3822c58f1f6328e6",
+          "tamano_bytes": 1060214
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2022_municipios_metadata.json",
+          "sha256": "f4a826448f640b26888213b51e63cb23f82892b59f8ca507b26c1650236ac798",
+          "tamano_bytes": 34320
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2023_municipios.json",
+          "sha256": "bc0bdfb0975cab2f41aa1e1561005223de5ad9a198f93814e3840e46c59dd869",
+          "tamano_bytes": 1406680
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_mgn_2023_municipios_metadata.json",
+          "sha256": "765a68a9d0ee18f5ffa461526167104eec7743f6a41d1669622dd6152b618e51",
+          "tamano_bytes": 36033
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2024_municipios.json",
+          "sha256": "08994eb928a7404deaac2a0e554d16b473f4b5aac5d751c60108033cdfcec2e9",
+          "tamano_bytes": 947940
+        },
+        {
+          "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\dane_divipola_2024_municipios_metadata.json",
+          "sha256": "65c08c4b16d6aeaab543f6d758c8011d8ce6e88033d184ffe52bafe4ba902807",
+          "tamano_bytes": 31757
+        }
+      ],
+      "codigos_revision_territorial": [
+        "27086",
+        "27493",
+        "27615",
+        "94343",
+        "94663"
+      ],
+      "manifest": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\reference\\catalogos_dane.json",
+      "catalogos_anuales": [
+        {
+          "anio": 2018,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1",
+          "criterio_temporal": "capa_anual",
+          "filas_origen": 1122,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2018,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/2",
+          "criterio_temporal": "capa_anual",
+          "filas_origen": 20,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2019,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2019/Serv_CapasMGN_2019/MapServer/317",
+          "criterio_temporal": "capa_anual",
+          "filas_origen": 1122,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2020,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2020/Serv_CapasMGN_2020/MapServer/317",
+          "criterio_temporal": "anio_registro",
+          "filas_origen": 1121,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2021,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2021/Serv_CapasMGN_2021/MapServer/317",
+          "criterio_temporal": "anio_registro",
+          "filas_origen": 1121,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2022,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317",
+          "criterio_temporal": "anio_registro",
+          "filas_origen": 1121,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2023,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2023/Serv_CapasMGN_2023/MapServer/317",
+          "criterio_temporal": "anio_registro",
+          "filas_origen": 1121,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        },
+        {
+          "anio": 2024,
+          "referencia": "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2024/MapServer/317",
+          "criterio_temporal": "anio_registro",
+          "filas_origen": 1121,
+          "filas_fuera_anio": 0,
+          "filas_invalidas": 0
+        }
+      ]
+    }
+  },
+  "variables_criticas": {
+    "poblacion_total": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7850,
+      "porcentaje_presencia_numerica": 100.0,
+      "numerador_utilizables_fuente": 7833,
+      "porcentaje_utilizables_fuente": 99.78343949044586,
+      "numerador_utilizables_panel": 7833,
+      "porcentaje_utilizables_panel": 99.78343949044586,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    },
+    "poblacion_centros_rural": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7850,
+      "porcentaje_presencia_numerica": 100.0,
+      "numerador_utilizables_fuente": 7833,
+      "porcentaje_utilizables_fuente": 99.78343949044586,
+      "numerador_utilizables_panel": 7833,
+      "porcentaje_utilizables_panel": 99.78343949044586,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    },
+    "accesos_t4": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7813,
+      "porcentaje_presencia_numerica": 99.52866242038216,
+      "numerador_utilizables_fuente": 7666,
+      "porcentaje_utilizables_fuente": 97.656050955414,
+      "numerador_utilizables_panel": 7666,
+      "porcentaje_utilizables_panel": 97.656050955414,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    },
+    "cobertura_neta": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7850,
+      "porcentaje_presencia_numerica": 100.0,
+      "numerador_utilizables_fuente": 7850,
+      "porcentaje_utilizables_fuente": 100.0,
+      "numerador_utilizables_panel": 7833,
+      "porcentaje_utilizables_panel": 99.78343949044586,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    },
+    "desercion": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7845,
+      "porcentaje_presencia_numerica": 99.93630573248407,
+      "numerador_utilizables_fuente": 7845,
+      "porcentaje_utilizables_fuente": 99.93630573248407,
+      "numerador_utilizables_panel": 7828,
+      "porcentaje_utilizables_panel": 99.71974522292993,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    },
+    "reprobacion": {
+      "denominador": 7850,
+      "numerador_presencia_numerica": 7845,
+      "porcentaje_presencia_numerica": 99.93630573248407,
+      "numerador_utilizables_fuente": 7845,
+      "porcentaje_utilizables_fuente": 99.93630573248407,
+      "numerador_utilizables_panel": 7828,
+      "porcentaje_utilizables_panel": 99.71974522292993,
+      "cumple_meta": true,
+      "meta_pct": 95.0
+    }
+  },
+  "conjunto_critico": {
+    "denominador": 7850,
+    "numerador_presencia_numerica": 7813,
+    "porcentaje_presencia_numerica": 99.52866242038216,
+    "numerador_utilizables_fuente": 7666,
+    "porcentaje_utilizables_fuente": 97.656050955414,
+    "numerador_utilizables_panel": 7666,
+    "porcentaje_utilizables_panel": 97.656050955414,
+    "cumple_meta": true
+  },
+  "coincidencia_internet_t4": {
+    "numerador": 7813,
+    "denominador": 7850,
+    "porcentaje": 99.52866242038216
+  },
+  "aceptacion_panel": {
+    "estado": "cumple",
+    "cumple_meta": true,
+    "motivos": []
+  },
+  "advertencias": [
+    "Los porcentajes de presencia y utilizacion local usan todas las filas del universo MEN, no las filas de cada Silver.",
+    "La coincidencia con el catalogo actual no acredita por si sola la vigencia territorial para cada anio.",
+    "La utilizacion en el panel exige controles de fuente e identidad territorial acreditada; los valores observados se conservan.",
+    "Un cero valido cuenta como dato completo, pero puede impedir un indicador con ese valor como denominador."
+  ],
+  "ejecucion_id": "391ea7f8-c266-4dff-bd06-7e4de3e2419a",
+  "version_contrato": "1.1",
+  "periodo": {
+    "inicio": 2018,
+    "fin": 2024
+  }
+}

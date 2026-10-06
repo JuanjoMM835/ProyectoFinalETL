@@ -56,10 +56,13 @@ def _estado_tasa(texto: pd.Series, valores: pd.Series, cobertura: bool) -> pd.Se
     # Infinito es representable por Python, pero no sirve como tasa educativa.
     no_finito = texto.str.lower().isin(["inf", "+inf", "-inf", "infinity", "+infinity", "-infinity"])
     estado.loc[no_finito] = "no_utilizable"
-    # Conservamos el valor numerico, pero su estado impide usarlo sin revisar.
+    # La ficha MEN de cobertura neta admite >100 por proyecciones y movilidad.
+    # Esa magnitud aislada no invalida cobertura; desercion/reprobacion si tienen
+    # limite porcentual. Los negativos y no finitos siguen siendo no utilizables.
     estado.loc[valores.lt(0).fillna(False)] = "no_utilizable"
     superiores = valores.gt(100).fillna(False)
-    estado.loc[superiores] = "pendiente_revision" if cobertura else "no_utilizable"
+    if not cobertura:
+        estado.loc[superiores] = "no_utilizable"
     return estado
 
 
@@ -105,7 +108,8 @@ def limpiar_educacion(
     ]
     reservadas = {
         "registro_origen", "departamento_inconsistente",
-        "poblacion_5_16_no_utilizable", "estado_homologacion",
+          "poblacion_5_16_no_utilizable", "estado_homologacion",
+          "cobertura_neta_superior_100_informativo",
     }.union(
         nombre + "_original" for nombre in originales
     ).union("estado_" + nombre for nombre in ("cobertura_neta", "desercion", "reprobacion"))
@@ -215,11 +219,15 @@ def limpiar_educacion(
             datos[nombre] = valores
 
     # Las tasas principales conservan su valor y un estado de utilizacion.
-    # Cobertura neta >100 queda pendiente; no se recorta a 100 ni se borra.
+    # Cobertura neta >100 se conserva y se senala; no se recorta ni se invalida
+    # automaticamente. Referencia: ficha oficial MEN Cobertura_02_V2024.
     for nombre in ("cobertura_neta", "desercion", "reprobacion"):
         datos["estado_" + nombre] = _estado_tasa(
             textos[nombre], datos[nombre], cobertura=(nombre == "cobertura_neta")
         )
+    datos["cobertura_neta_superior_100_informativo"] = (
+        datos["cobertura_neta"].gt(100).fillna(False).astype("boolean")
+    )
     datos["departamento_inconsistente"] = (
         datos["codigo_municipio"].str[:proceso["department_code_length"]]
         .ne(datos["codigo_departamento"]).fillna(True)
@@ -231,7 +239,7 @@ def limpiar_educacion(
     )
 
     # Separar presencia numerica de utilizacion semantica hace visible el
-    # efecto de las coberturas netas >100 pendientes; no declara calidad Gold.
+    # presencia y uso local; el reporte de fuente no declara calidad Gold.
     criticas_educativas = ["cobertura_neta", "desercion", "reprobacion"]
     utilizables = pd.DataFrame({
         nombre: datos["estado_" + nombre].eq("disponible")
@@ -258,6 +266,12 @@ def limpiar_educacion(
         "coberturas_brutas_superiores_100_informativo": (
             int(datos["cobertura_bruta"].gt(100).sum()) if "cobertura_bruta" in datos else 0
         ),
+        "coberturas_netas_superiores_100_informativo": int(datos["cobertura_neta_superior_100_informativo"].sum()),
+        "criterio_cobertura_neta": {
+            "superar_100_no_invalida_por_si_solo": True,
+            "referencia": "https://portalsineb.mineducacion.gov.co/1782/articles-412165_Cobertura_02_V2024.pdf",
+            "alcance": "Magnitud informativa compatible con la metodologia; no certifica cada registro individual.",
+        },
         "completitud_criticas_educativas": {
             nombre: {
                 "denominador": len(datos),

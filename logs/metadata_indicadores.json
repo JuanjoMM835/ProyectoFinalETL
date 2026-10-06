@@ -1,0 +1,1987 @@
+{
+  "ejecucion_id": "b32f0ed6-b9ed-4aea-b7d3-91e787109925",
+  "etapa": "indicadores",
+  "estado": "exploratorio",
+  "inicio_utc": "2026-10-06T15:14:36.172969+00:00",
+  "fin_preparacion_utc": "2026-10-06T15:14:38.470157+00:00",
+  "version_proyecto": "1.0.0",
+  "version_contrato": "1.1",
+  "periodo": {
+    "inicio": 2018,
+    "fin": 2024
+  },
+  "trimestre_referencia": 4,
+  "procedencia": {
+    "ejecucion_integracion": "391ea7f8-c266-4dff-bd06-7e4de3e2419a",
+    "version_contrato": "1.1",
+    "entradas_integracion": {
+      "panel_integrado": {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\gold\\panel_integrado_exploratorio.parquet",
+        "sha256": "367c84f98d9f9da86af44ba1254e57bdee8cbbc22cc9ca381334bc7b76ccabb5",
+        "tamano_bytes": 1978445
+      },
+      "reporte_integracion": {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\reporte_integracion.json",
+        "sha256": "0f682f92e7af8b4992c7739580a009eeeef119eb688aa95df3c45acb65520055",
+        "tamano_bytes": 36796
+      },
+      "metadata_integracion": {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\metadata_integracion.json",
+        "sha256": "c5f4e07a4d849d0293b28f8ed9eb33478bbfc2c9cd75e09af72d4d3828ac04a8",
+        "tamano_bytes": 70339
+      }
+    },
+    "aceptacion_panel": {
+      "estado": "cumple",
+      "cumple_meta": true,
+      "motivos": []
+    }
+  },
+  "integracion_verificada_sin_cambios": true,
+  "configuracion": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\config\\config.yaml",
+    "sha256": "fb4b9b84d346cb8f45bcf844a159c4abc9294d065c2ad793041941b327fbcebe"
+  },
+  "codigo": {
+    "commit_git": "e607fbb95d360f552edef7e2c2fb653a026da43a",
+    "cambios_locales": true,
+    "archivos": [
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\main.py",
+        "sha256": "42d00de4bf58ee5ba55e019b4ad25dfe8c23e808dbf7843ad60700bd12badb30"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_divipola.py",
+        "sha256": "755511c71b3a9f071837d0251700b992b9462e3aec83da8f3f662c65220d0949"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_education.py",
+        "sha256": "0c768a83e6412246ae11199b78ed9cd77344c7bc25e3ef1c949c28fab908a215"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_internet.py",
+        "sha256": "75b37d462c1f835ae17bd307e37f452a127fd9c64262f017c884f77f9d5faaae"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\extract_population.py",
+        "sha256": "8521d4cff1403efbcd9201a2a634b53b0237bd80fd9e09aaec43189b72c7af65"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\read_integrated.py",
+        "sha256": "fa11c56d1568394773de49e7a8814e68ae14caf28d6743c5972998b11230bc65"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\extract\\read_silver.py",
+        "sha256": "eac0c83a6cea368525c52f17db68ab5900ec9ad972b1aa998c6f2d19ee90a422"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\execution_metadata.py",
+        "sha256": "e6adef09df55a872f217193079136e0809e36c6859b3e2a0db62717c9e3d0fb3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_gold.py",
+        "sha256": "62562ced44bd5fe6fd20c6a9f8e6561f47f128d2a326db57efdec8abc8730af3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_integration.py",
+        "sha256": "6ed7c47207321e18eaa6eb6bc73fce61ba22317a1131e96b108c1e74d857c68d"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\load\\export_results.py",
+        "sha256": "f4dab7313806de52c4862ef8a69b3ea4d8d0fbeea8f10b63e7a034f17d0e6557"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\build_indicators.py",
+        "sha256": "8d96a054421736828accb466fb8e8d9e9a9bb46b96892234a24c873a46f26b26"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_divipola.py",
+        "sha256": "f47e0c67a20d237c92b0a7bdb24fc0ee536af1fa3ba07cf18cc22e0692b78ebb"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_education.py",
+        "sha256": "2d8a86c433d1a884eff0e9f247e06c5539d964248a5ea71c2154c684c91f3457"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_internet.py",
+        "sha256": "951871dd5d666eba59a691dd52d693c2cc684497182109c4a2b40b4d80006e3d"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\clean_population.py",
+        "sha256": "a191f3397c3469ffc9770b73874420388a92d3e96aa86f6c359008f7731f1fc6"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\integrate_sources.py",
+        "sha256": "e0e344681f5083d346ca3dd343cfa7fcf4543a0f105ee1db0cd4e562884e7527"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\quality_integration.py",
+        "sha256": "813150305550c8cc43fce2e078b4a96f578de27d635bb5e6f88068b37730c7ac"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\quality_silver.py",
+        "sha256": "9b94d7edfa304ca26e405d3f0b51e20abd2d31afbe56f3ae66c84f2a433b97a3"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\src\\transform\\resolve_territory.py",
+        "sha256": "b9c0e4328c3d05cfbb9b0dfa63972594d02d3531f590fbe0798e8cfecf682253"
+      },
+      {
+        "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\docs\\contrato_datos.md",
+        "sha256": "71ac06f2a689a260c0d4f302314884c3ab3584f966ce895245e7cffa5a089657"
+      }
+    ]
+  },
+  "entorno": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "pyarrow": "17.0.0",
+    "pyyaml": "6.0.3"
+  },
+  "resumen_indicadores": {
+    "filas_panel": 7850,
+    "indicadores": {
+      "accesos_por_100_habitantes": {
+        "formula": "accesos_t4 / poblacion_total * 100",
+        "denominador": 7850,
+        "numerador_calculables": 7666,
+        "pct_calculables": 97.656050955414,
+        "numerador_diagnostico": 7666,
+        "pct_diagnostico": 97.656050955414,
+        "estados": {
+          "disponible": 7666,
+          "pendiente_revision": 149,
+          "no_calculable": 35
+        },
+        "motivos": {
+          "calculable": 7666,
+          "revision_internet": 132,
+          "sin_reporte_t4": 35,
+          "revision_poblacion": 17
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 7666,
+          "revision_internet": 132,
+          "sin_reporte_t4": 35,
+          "revision_poblacion": 17
+        }
+      },
+      "porcentaje_centros_rural": {
+        "formula": "poblacion_centros_rural / poblacion_total * 100",
+        "denominador": 7850,
+        "numerador_calculables": 7833,
+        "pct_calculables": 99.78343949044586,
+        "numerador_diagnostico": 7833,
+        "pct_diagnostico": 99.78343949044586,
+        "estados": {
+          "disponible": 7833,
+          "pendiente_revision": 17
+        },
+        "motivos": {
+          "calculable": 7833,
+          "revision_poblacion": 17
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 7833,
+          "revision_poblacion": 17
+        }
+      },
+      "crecimiento_anual_accesos": {
+        "formula": "(accesos_t4 - accesos_t4_anterior) / accesos_t4_anterior * 100",
+        "denominador": 7850,
+        "numerador_calculables": 6542,
+        "pct_calculables": 83.3375796178344,
+        "numerador_diagnostico": 6542,
+        "pct_diagnostico": 83.3375796178344,
+        "estados": {
+          "disponible": 6542,
+          "no_aplica": 1122,
+          "pendiente_revision": 144,
+          "no_calculable": 42
+        },
+        "motivos": {
+          "calculable": 6542,
+          "sin_anio_previo_en_alcance": 1122,
+          "revision_internet": 144,
+          "sin_reporte_t4": 22,
+          "sin_reporte_t4_anterior": 19,
+          "sin_anio_anterior_consecutivo": 1
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 6542,
+          "sin_anio_previo_en_alcance": 1122,
+          "revision_internet": 144,
+          "sin_reporte_t4": 22,
+          "sin_reporte_t4_anterior": 19,
+          "sin_anio_anterior_consecutivo": 1
+        }
+      },
+      "porcentaje_cobertura_neta": {
+        "formula": "valor suministrado por MEN: cobertura_neta (porcentaje)",
+        "denominador": 7850,
+        "numerador_calculables": 7833,
+        "pct_calculables": 99.78343949044586,
+        "numerador_diagnostico": 7850,
+        "pct_diagnostico": 100.0,
+        "estados": {
+          "disponible": 7833,
+          "pendiente_revision": 17
+        },
+        "motivos": {
+          "calculable": 7833,
+          "identidad_territorial_pendiente": 17
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 7850
+        }
+      },
+      "tasa_desercion": {
+        "formula": "valor suministrado por MEN: desercion (porcentaje)",
+        "denominador": 7850,
+        "numerador_calculables": 7828,
+        "pct_calculables": 99.71974522292993,
+        "numerador_diagnostico": 7845,
+        "pct_diagnostico": 99.93630573248407,
+        "estados": {
+          "disponible": 7828,
+          "pendiente_revision": 17,
+          "no_calculable": 5
+        },
+        "motivos": {
+          "calculable": 7828,
+          "identidad_territorial_pendiente": 17,
+          "valor_educativo_faltante": 5
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 7845,
+          "valor_educativo_faltante": 5
+        }
+      },
+      "tasa_reprobacion": {
+        "formula": "valor suministrado por MEN: reprobacion (porcentaje)",
+        "denominador": 7850,
+        "numerador_calculables": 7828,
+        "pct_calculables": 99.71974522292993,
+        "numerador_diagnostico": 7845,
+        "pct_diagnostico": 99.93630573248407,
+        "estados": {
+          "disponible": 7828,
+          "pendiente_revision": 17,
+          "no_calculable": 5
+        },
+        "motivos": {
+          "calculable": 7828,
+          "identidad_territorial_pendiente": 17,
+          "valor_educativo_faltante": 5
+        },
+        "motivos_diagnostico": {
+          "calculable_controles_fuente": 7845,
+          "valor_educativo_faltante": 5
+        }
+      }
+    },
+    "aceptacion_panel": {
+      "estado": "cumple",
+      "cumple_meta": true,
+      "motivos": []
+    }
+  },
+  "salidas": {
+    "indicadores_gold": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\gold\\indicadores_municipio_anio.parquet",
+      "filas": 7850,
+      "columnas": [
+        {
+          "nombre": "anio",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "educacion__tasa_matriculacion_5_16",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__tamano_promedio_de_grupo",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__sedes_conectadas_a_internet",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "educacion__anio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__desercion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__reprobacion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16_no_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_superior_100_informativo",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "educacion__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "educacion__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__poblacion_total_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__poblacion_cabecera_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__poblacion_centros_rural_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__fila_excel_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__fila_excel_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__fila_excel_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__areas_incompletas",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "poblacion__suma_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__diferencia_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_consistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "poblacion__metadatos_incompletos",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "poblacion__revision_territorial_pendiente",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "estado_poblacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "denominador_positivo",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_para_ratios_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "coincidencia_poblacion",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_t4",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "accesos_validos_parcial",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "trimestre_referencia",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registros_fuente",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registros_accesos_no_utilizables",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registro_origen_min",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registro_origen_max",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__revision_territorial_pendiente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__metadatos_reporte_pendientes",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__segmento_pendiente_revision",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_internet",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_para_indicadores_utilizables",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__codigos_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__nombres_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__codigos_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__nombres_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__segmentos_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__tecnologias_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "coincidencia_internet",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "divipola__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_territorio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__longitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "divipola__latitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "divipola__registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "divipola__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_territorio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__longitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__latitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_no_resuelto",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "divipola__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "divipola__metadatos_incompletos",
+          "tipo": "object"
+        },
+        {
+          "nombre": "divipola__departamento_nombre_inconsistente",
+          "tipo": "object"
+        },
+        {
+          "nombre": "divipola__estado_catalogo",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__estado_longitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__estado_latitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__coordenadas_utilizables",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "coincidencia_catalogo_actual",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "fuente_nombre_territorial",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tipo_territorio_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_coincide_poblacion",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_coincide_internet",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_coincide_catalogo_actual",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente_entre_fuentes",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_desconocido_en_coincidencias",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "revision_territorial_pendiente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "evidencia_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "vigencia_desde",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "vigencia_hasta",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "tipo_territorio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_total_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_total_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_centros_rural_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_centros_rural_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_t4_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_t4_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "cobertura_neta_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "cobertura_neta_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "desercion_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "desercion_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "reprobacion_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "reprobacion_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_por_100_habitantes",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_accesos_por_100_habitantes",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_accesos_por_100_habitantes",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_por_100_habitantes_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_accesos_por_100_habitantes_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_accesos_por_100_habitantes_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_centros_rural",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_centros_rural",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_centros_rural",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_centros_rural_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_centros_rural_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_centros_rural_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "crecimiento_anual_accesos",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_crecimiento_anual_accesos",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_crecimiento_anual_accesos",
+          "tipo": "string"
+        },
+        {
+          "nombre": "crecimiento_anual_accesos_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_crecimiento_anual_accesos_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_crecimiento_anual_accesos_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_cobertura_neta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_cobertura_neta_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_cobertura_neta_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_cobertura_neta_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_desercion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_desercion_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_desercion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_desercion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_reprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_reprobacion_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_reprobacion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_reprobacion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "indice_prioridad",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_indice_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_indice_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "categoria_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "indice_prioridad_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_indice_prioridad_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_indice_prioridad_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "categoria_prioridad_diagnostico",
+          "tipo": "string"
+        }
+      ],
+      "tamano_bytes": 2699060,
+      "sha256": "64bf2b26ae5e6fcbc7f2525f78bba5c59040350fea2b8c759b73a0642fe7a3ba"
+    },
+    "indicadores_gold_csv": {
+      "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\data\\gold\\indicadores_municipio_anio.csv",
+      "filas": 7850,
+      "columnas": [
+        {
+          "nombre": "anio",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "codigo_municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__etc",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "educacion__tasa_matriculacion_5_16",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "cobertura_neta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__cobertura_bruta_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__tamano_promedio_de_grupo",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__sedes_conectadas_a_internet",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "desercion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__desercion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__aprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "reprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__reprobacion_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_transicion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_primaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_secundaria",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__repitencia_media",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "educacion__registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "educacion__anio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__desercion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__reprobacion_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__poblacion_5_16_no_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "educacion__cobertura_neta_superior_100_informativo",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "educacion__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "educacion__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__poblacion_total_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__poblacion_cabecera_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__poblacion_centros_rural_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__fila_excel_total",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__fila_excel_cabecera",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__fila_excel_centros_rural",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion__areas_incompletas",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "poblacion__suma_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion__diferencia_componentes",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "poblacion_consistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "poblacion__metadatos_incompletos",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "poblacion__revision_territorial_pendiente",
+          "tipo": "bool"
+        },
+        {
+          "nombre": "estado_poblacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "denominador_positivo",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_para_ratios_utilizable",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "coincidencia_poblacion",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_t4",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "accesos_validos_parcial",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "trimestre_referencia",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registros_fuente",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registros_accesos_no_utilizables",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registro_origen_min",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__registro_origen_max",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "internet__revision_territorial_pendiente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__departamento_inconsistente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__metadatos_reporte_pendientes",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__segmento_pendiente_revision",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_internet",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_para_indicadores_utilizables",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "internet__estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__codigos_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__nombres_municipio_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__codigos_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__nombres_departamento_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__segmentos_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "internet__tecnologias_originales",
+          "tipo": "string"
+        },
+        {
+          "nombre": "coincidencia_internet",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "divipola__municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_territorio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__longitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "divipola__latitud",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "divipola__registro_origen",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "divipola__codigo_municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__municipio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__codigo_departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__departamento_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_territorio_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__longitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__latitud_original",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__tipo_no_resuelto",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "divipola__departamento_inconsistente",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "divipola__metadatos_incompletos",
+          "tipo": "object"
+        },
+        {
+          "nombre": "divipola__departamento_nombre_inconsistente",
+          "tipo": "object"
+        },
+        {
+          "nombre": "divipola__estado_catalogo",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__estado_longitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__estado_latitud",
+          "tipo": "string"
+        },
+        {
+          "nombre": "divipola__coordenadas_utilizables",
+          "tipo": "bool[pyarrow]"
+        },
+        {
+          "nombre": "coincidencia_catalogo_actual",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "codigo_departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento",
+          "tipo": "string"
+        },
+        {
+          "nombre": "fuente_nombre_territorial",
+          "tipo": "string"
+        },
+        {
+          "nombre": "codigo_departamento_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "municipio_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tipo_territorio_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "estado_catalogo_actual",
+          "tipo": "string"
+        },
+        {
+          "nombre": "departamento_coincide_poblacion",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_coincide_internet",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_coincide_catalogo_actual",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_inconsistente_entre_fuentes",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "departamento_desconocido_en_coincidencias",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "revision_territorial_pendiente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "estado_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "evidencia_homologacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "vigencia_desde",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "vigencia_hasta",
+          "tipo": "Int64"
+        },
+        {
+          "nombre": "tipo_territorio",
+          "tipo": "string"
+        },
+        {
+          "nombre": "poblacion_total_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_total_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_centros_rural_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "poblacion_centros_rural_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_t4_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_t4_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "cobertura_neta_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "cobertura_neta_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "desercion_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "desercion_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "reprobacion_utilizable_fuente",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "reprobacion_utilizable_panel",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "accesos_por_100_habitantes",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_accesos_por_100_habitantes",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_accesos_por_100_habitantes",
+          "tipo": "string"
+        },
+        {
+          "nombre": "accesos_por_100_habitantes_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_accesos_por_100_habitantes_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_accesos_por_100_habitantes_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_centros_rural",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_centros_rural",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_centros_rural",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_centros_rural_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_centros_rural_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_centros_rural_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "crecimiento_anual_accesos",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_crecimiento_anual_accesos",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_crecimiento_anual_accesos",
+          "tipo": "string"
+        },
+        {
+          "nombre": "crecimiento_anual_accesos_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_crecimiento_anual_accesos_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_crecimiento_anual_accesos_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_cobertura_neta",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_cobertura_neta",
+          "tipo": "string"
+        },
+        {
+          "nombre": "porcentaje_cobertura_neta_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_porcentaje_cobertura_neta_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_porcentaje_cobertura_neta_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_desercion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_desercion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_desercion_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_desercion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_desercion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_reprobacion",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_reprobacion",
+          "tipo": "string"
+        },
+        {
+          "nombre": "tasa_reprobacion_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_tasa_reprobacion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_tasa_reprobacion_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "indice_prioridad",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_indice_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_indice_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "categoria_prioridad",
+          "tipo": "string"
+        },
+        {
+          "nombre": "indice_prioridad_diagnostico",
+          "tipo": "Float64"
+        },
+        {
+          "nombre": "estado_indice_prioridad_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "motivo_indice_prioridad_diagnostico",
+          "tipo": "string"
+        },
+        {
+          "nombre": "categoria_prioridad_diagnostico",
+          "tipo": "string"
+        }
+      ],
+      "tamano_bytes": 20429093,
+      "sha256": "dda90fe1f43ec7d738248a5379c079e77a20388116ee57c54b904c47031ff978",
+      "opciones_csv": {
+        "sep": ",",
+        "encoding": "utf-8-sig",
+        "index": false,
+        "float_format": "%.17g",
+        "na_rep": ""
+      }
+    }
+  },
+  "reporte_indicadores": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\reporte_indicadores.json",
+    "tamano_bytes": 6256,
+    "sha256": "76395c1a2f3e1a4433a757897867b95078c6f4992f5f4234c17a36ddae842220"
+  },
+  "metadata_indicadores": {
+    "archivo": "C:\\Users\\Juan Palacios\\Documents\\Universidad\\1_Semestre_Especializacion\\GESTION_DE_DATOS\\Proyecto_GYA\\ProyectoFinalETL\\logs\\metadata_indicadores.json"
+  },
+  "fin_exportacion_utc": "2026-10-06T15:14:40.760472Z"
+}

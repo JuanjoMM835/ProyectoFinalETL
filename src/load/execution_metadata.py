@@ -84,3 +84,83 @@ def crear_metadata_silver(
         "configuracion": {"archivo": str(ruta_configuracion.resolve()), "sha256": huella_actual_config},
         "codigo": codigo,
     }
+
+
+def capturar_codigo(configuracion: Mapping, raiz: Path) -> Dict[str, Any]:
+    """Identificar el codigo y el contrato antes de comenzar la integracion."""
+    codigo = _estado_git(raiz)
+    archivos = [raiz / "main.py"] + sorted((raiz / "src").rglob("*.py"))
+    archivos.append(raiz / configuracion["project"]["data_contract"]["path"])
+    # Los hashes describen tambien cambios locales que aun no tienen un commit.
+    codigo["archivos"] = [{"archivo": str(ruta.resolve()), "sha256": huella_archivo(ruta)}
+                         for ruta in archivos if ruta.is_file()]
+    return codigo
+
+
+def crear_metadata_integracion(
+    configuracion: Mapping, raiz: Path, ruta_configuracion: Path,
+    ejecucion_id: str, inicio_utc: str, procedencia: dict,
+    huella_configuracion: str, codigo: dict,
+) -> Dict[str, Any]:
+    """Confirmar entradas Silver y describir esta ejecucion, sin releer Bronze."""
+    if huella_archivo(ruta_configuracion) != huella_configuracion:
+        raise ValueError("La configuracion cambio durante la integracion; no se publica el panel.")
+    # Confirmamos los seis archivos consumidos: cuatro tablas y sus dos JSON.
+    # El lector ya verifico filas y tipos; aqui detectamos cambios durante el cruce.
+    for entrada in procedencia["entradas_silver"].values():
+        ruta = Path(entrada["archivo_actual"])
+        if ruta.stat().st_size != entrada["tamano_bytes"] or huella_archivo(ruta) != entrada["sha256"]:
+            raise ValueError("Una tabla Silver cambio durante la integracion: {}".format(ruta.name))
+    for opcion in ("metadata_silver", "reporte_calidad_silver"):
+        entrada = procedencia[opcion]
+        if huella_archivo(Path(entrada["archivo"])) != entrada["sha256"]:
+            raise ValueError("La evidencia Silver cambio durante la integracion.")
+    # Las referencias temporales son entradas de esta etapa cuando se usan.
+    for entrada in procedencia.get("entradas_referencia", []):
+        ruta = Path(entrada["archivo"])
+        if ruta.stat().st_size != entrada["tamano_bytes"] or huella_archivo(ruta) != entrada["sha256"]:
+            raise ValueError("La evidencia territorial cambio durante la integracion.")
+    for archivo in codigo["archivos"]:
+        if huella_archivo(Path(archivo["archivo"])) != archivo["sha256"]:
+            raise ValueError("El codigo o contrato cambio durante la integracion.")
+    return {
+        "ejecucion_id": ejecucion_id, "etapa": "integracion", "estado": "exploratorio",
+        "inicio_utc": inicio_utc, "fin_preparacion_utc": datetime.now(timezone.utc).isoformat(),
+        "version_proyecto": configuracion["project"]["version"],
+        "version_contrato": configuracion["project"]["data_contract"]["version"],
+        "periodo": {"inicio": configuracion["processing"]["year_start"],
+                    "fin": configuracion["processing"]["year_end"]},
+        "trimestre_referencia": configuracion["processing"]["internet_quarter"],
+        "procedencia": procedencia, "silver_verificado_sin_cambios": True,
+        "configuracion": {"archivo": str(ruta_configuracion), "sha256": huella_configuracion},
+        "codigo": codigo,
+    }
+
+
+def crear_metadata_indicadores(
+    configuracion: Mapping, raiz: Path, ruta_configuracion: Path,
+    ejecucion_id: str, inicio_utc: str, procedencia: dict,
+    huella_configuracion: str, codigo: dict,
+) -> Dict[str, Any]:
+    """Describir Gold y confirmar que el panel y sus evidencias no cambiaron."""
+    if huella_archivo(ruta_configuracion) != huella_configuracion:
+        raise ValueError("La configuracion cambio durante el calculo; no se publica Gold.")
+    for entrada in procedencia["entradas_integracion"].values():
+        ruta = Path(entrada["archivo"])
+        if ruta.stat().st_size != entrada["tamano_bytes"] or huella_archivo(ruta) != entrada["sha256"]:
+            raise ValueError("Una entrada integrada cambio durante el calculo de indicadores.")
+    for archivo in codigo["archivos"]:
+        if huella_archivo(Path(archivo["archivo"])) != archivo["sha256"]:
+            raise ValueError("El codigo o contrato cambio durante el calculo de indicadores.")
+    return {
+        "ejecucion_id": ejecucion_id, "etapa": "indicadores", "estado": "exploratorio",
+        "inicio_utc": inicio_utc, "fin_preparacion_utc": datetime.now(timezone.utc).isoformat(),
+        "version_proyecto": configuracion["project"]["version"],
+        "version_contrato": configuracion["project"]["data_contract"]["version"],
+        "periodo": {"inicio": configuracion["processing"]["year_start"],
+                    "fin": configuracion["processing"]["year_end"]},
+        "trimestre_referencia": configuracion["processing"]["internet_quarter"],
+        "procedencia": procedencia, "integracion_verificada_sin_cambios": True,
+        "configuracion": {"archivo": str(ruta_configuracion), "sha256": huella_configuracion},
+        "codigo": codigo,
+    }

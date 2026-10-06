@@ -1,0 +1,423 @@
+{
+    "version_manifiesto":  "1.0",
+    "entidad":  "DANE",
+    "capturado_en_utc":  "2026-10-06T15:10:14.5986869Z",
+    "alcance":  "Identidad codigo-departamento en el anio exacto de cada snapshot; sin interpolacion ni remapeo de territorios historicos",
+    "catalogos_anuales":  [
+                              {
+                                  "anio":  2018,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1",
+                                  "criterio_temporal":  "capa_anual",
+                                  "archivo":  "data/reference/dane_divipola_2018_municipios.json",
+                                  "sha256":  "772cdf999ac50fb26287b5de004f6af0c8f452a475f42c30306c1107ca0370e8",
+                                  "tamano_bytes":  458582,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CCDGO",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBR"
+                                               },
+                                  "numero_registros":  1122,
+                                  "capturado_en_utc":  "2026-10-06T15:09:52.2332808Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_divipola_2018_municipios_metadata.json",
+                                                   "sha256":  "fb3540901f13606f9607bdb0dd17b8dfe9b5672ebbc9f18932ce4b66da11d2b3",
+                                                   "tamano_bytes":  36887
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1122,
+                                                                "cantidad_ids":  1122,
+                                                                "cantidad_features":  1122,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/1/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  122,
+                                                                                    "cantidad_features":  122,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            },
+                                  "tipo_por_capa":  null
+                              },
+                              {
+                                  "anio":  2018,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/2",
+                                  "criterio_temporal":  "capa_anual",
+                                  "archivo":  "data/reference/dane_divipola_2018_anm.json",
+                                  "sha256":  "66a04cb1bbb4bd91c1ce5ceb29514f16a431949e0a11b3916ccfdd3facaa9629",
+                                  "tamano_bytes":  9571,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CCDGO",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBR"
+                                               },
+                                  "numero_registros":  20,
+                                  "capturado_en_utc":  "2026-10-06T15:09:52.6205452Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_divipola_2018_anm_metadata.json",
+                                                   "sha256":  "9587077746647d47542c89e56031b3680757adbdf2c8647219aac19af103e37b",
+                                                   "tamano_bytes":  31577
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  20,
+                                                                "cantidad_ids":  20,
+                                                                "cantidad_features":  20,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/2/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DeptosMpiosANM_2018/MapServer/2/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  20,
+                                                                                    "cantidad_features":  20,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            },
+                                  "tipo_por_capa":  "area_no_municipalizada"
+                              },
+                              {
+                                  "anio":  2019,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2019/Serv_CapasMGN_2019/MapServer/317",
+                                  "criterio_temporal":  "capa_anual",
+                                  "archivo":  "data/reference/dane_mgn_2019_municipios.json",
+                                  "sha256":  "f3bbb22bd68695d3a4bec41e2f92e67fcfca603b68d52dbd07528d43041fb9d9",
+                                  "tamano_bytes":  870641,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CCNCTNDO",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "anio_registro":  "MPIO_NANO"
+                                               },
+                                  "numero_registros":  1122,
+                                  "capturado_en_utc":  "2026-10-06T15:09:55.1072214Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_mgn_2019_municipios_metadata.json",
+                                                   "sha256":  "0864466504f15043631c903a248bfb35356ba3cd8e6e4c30bb9b35edcf7a2d92",
+                                                   "tamano_bytes":  36742
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1122,
+                                                                "cantidad_ids":  1122,
+                                                                "cantidad_features":  1122,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2019/Serv_CapasMGN_2019/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2019/Serv_CapasMGN_2019/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  122,
+                                                                                    "cantidad_features":  122,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              },
+                              {
+                                  "anio":  2020,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2020/Serv_CapasMGN_2020/MapServer/317",
+                                  "criterio_temporal":  "anio_registro",
+                                  "archivo":  "data/reference/dane_mgn_2020_municipios.json",
+                                  "sha256":  "1ed9fbf37e4ad8e49b9f1d45196bb9b6bca42acfbe0ae457635dcb44dd896329",
+                                  "tamano_bytes":  1022104,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CDPMP",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "tipo":  "MPIO_TIPO",
+                                                   "anio_registro":  "MPIO_VGNC"
+                                               },
+                                  "numero_registros":  1121,
+                                  "capturado_en_utc":  "2026-10-06T15:10:02.1997359Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_mgn_2020_municipios_metadata.json",
+                                                   "sha256":  "1c1b285793dffa4d86b28cbe6e9b6295cfcf1fe10478b9beb5498858f528b1a7",
+                                                   "tamano_bytes":  36021
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1121,
+                                                                "cantidad_ids":  1121,
+                                                                "cantidad_features":  1121,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2020/Serv_CapasMGN_2020/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2020/Serv_CapasMGN_2020/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  121,
+                                                                                    "cantidad_features":  121,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              },
+                              {
+                                  "anio":  2021,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2021/Serv_CapasMGN_2021/MapServer/317",
+                                  "criterio_temporal":  "anio_registro",
+                                  "archivo":  "data/reference/dane_mgn_2021_municipios.json",
+                                  "sha256":  "cb94d601b317f9002ea850cf80898c77cd2754bacf9ab37a1567fca6ecd10e26",
+                                  "tamano_bytes":  1022133,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CDPMP",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "tipo":  "MPIO_TIPO",
+                                                   "anio_registro":  "MPIO_VGNC"
+                                               },
+                                  "numero_registros":  1121,
+                                  "capturado_en_utc":  "2026-10-06T15:10:08.1253970Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_mgn_2021_municipios_metadata.json",
+                                                   "sha256":  "993259c5dbebb47df75c22a1d335217e7695373e29482d26280eeeb13d489b34",
+                                                   "tamano_bytes":  36272
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1121,
+                                                                "cantidad_ids":  1121,
+                                                                "cantidad_features":  1121,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2021/Serv_CapasMGN_2021/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2021/Serv_CapasMGN_2021/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  121,
+                                                                                    "cantidad_features":  121,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              },
+                              {
+                                  "anio":  2022,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317",
+                                  "criterio_temporal":  "anio_registro",
+                                  "archivo":  "data/reference/dane_mgn_2022_municipios.json",
+                                  "sha256":  "c1838dfc27adcb4235dcd17c8df93506bc71dfda3da81f3b3822c58f1f6328e6",
+                                  "tamano_bytes":  1060214,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CDPMP",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "tipo":  "MPIO_TIPO",
+                                                   "anio_registro":  "MPIO_NANO"
+                                               },
+                                  "numero_registros":  1121,
+                                  "capturado_en_utc":  "2026-10-06T15:10:09.0997821Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_mgn_2022_municipios_metadata.json",
+                                                   "sha256":  "f4a826448f640b26888213b51e63cb23f82892b59f8ca507b26c1650236ac798",
+                                                   "tamano_bytes":  34320
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1121,
+                                                                "cantidad_ids":  1121,
+                                                                "cantidad_features":  1121,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2022/Serv_CapasMGN_2022/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  121,
+                                                                                    "cantidad_features":  121,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              },
+                              {
+                                  "anio":  2023,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2023/Serv_CapasMGN_2023/MapServer/317",
+                                  "criterio_temporal":  "anio_registro",
+                                  "archivo":  "data/reference/dane_mgn_2023_municipios.json",
+                                  "sha256":  "bc0bdfb0975cab2f41aa1e1561005223de5ad9a198f93814e3840e46c59dd869",
+                                  "tamano_bytes":  1406680,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CDPMP",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "tipo":  "MPIO_TIPO",
+                                                   "anio_registro":  "MPIO_NANO"
+                                               },
+                                  "numero_registros":  1121,
+                                  "capturado_en_utc":  "2026-10-06T15:10:11.6293905Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_mgn_2023_municipios_metadata.json",
+                                                   "sha256":  "765a68a9d0ee18f5ffa461526167104eec7743f6a41d1669622dd6152b618e51",
+                                                   "tamano_bytes":  36033
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1121,
+                                                                "cantidad_ids":  1121,
+                                                                "cantidad_features":  1121,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2023/Serv_CapasMGN_2023/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2023/Serv_CapasMGN_2023/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  121,
+                                                                                    "cantidad_features":  121,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              },
+                              {
+                                  "anio":  2024,
+                                  "referencia":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2024/MapServer/317",
+                                  "criterio_temporal":  "anio_registro",
+                                  "archivo":  "data/reference/dane_divipola_2024_municipios.json",
+                                  "sha256":  "08994eb928a7404deaac2a0e554d16b473f4b5aac5d751c60108033cdfcec2e9",
+                                  "tamano_bytes":  947940,
+                                  "columnas":  {
+                                                   "codigo":  "MPIO_CDPMP",
+                                                   "departamento":  "DPTO_CCDGO",
+                                                   "nombre":  "MPIO_CNMBRE",
+                                                   "nombre_departamento":  "DPTO_CNMBRE",
+                                                   "tipo":  "MPIO_TIPO",
+                                                   "anio_registro":  "MPIO_NANO"
+                                               },
+                                  "numero_registros":  1121,
+                                  "capturado_en_utc":  "2026-10-06T15:10:14.5516894Z",
+                                  "metadata":  {
+                                                   "archivo":  "data/reference/dane_divipola_2024_municipios_metadata.json",
+                                                   "sha256":  "65c08c4b16d6aeaab543f6d758c8011d8ce6e88033d184ffe52bafe4ba902807",
+                                                   "tamano_bytes":  31757
+                                               },
+                                  "verificacion_descarga":  {
+                                                                "conteo_oficial":  1121,
+                                                                "cantidad_ids":  1121,
+                                                                "cantidad_features":  1121,
+                                                                "ids_unicos":  true,
+                                                                "ids_coincidentes":  true,
+                                                                "consulta_completa":  true,
+                                                                "filtro_aplicado":  null,
+                                                                "consulta_conteo":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2024/MapServer/317/query?where=1%3D1\u0026returnCountOnly=true\u0026f=pjson",
+                                                                "consulta_ids":  "https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2024/MapServer/317/query?where=1%3D1\u0026returnIdsOnly=true\u0026f=pjson",
+                                                                "paginas":  [
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  500,
+                                                                                    "cantidad_features":  500,
+                                                                                    "exceededTransferLimit":  false
+                                                                                },
+                                                                                {
+                                                                                    "metodo":  "objectIds",
+                                                                                    "cantidad_ids":  121,
+                                                                                    "cantidad_features":  121,
+                                                                                    "exceededTransferLimit":  false
+                                                                                }
+                                                                            ]
+                                                            }
+                              }
+                          ]
+}
